@@ -1,0 +1,5399 @@
+<!-- __________ BS4 GET STARTED __________ -->
+
+
+<!-- What is Bootstrap? -->
+<!-- 
+    Bootstrap is a free front-end framework for faster and easier web development
+    Bootstrap includes HTML and CSS based design templates for typography forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins
+    Bootstrap also gives you the ability to easily create responsive designs
+-->
+
+
+
+
+<!-- What is Responsive Web Design? -->
+<!-- 
+Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops -->
+
+<!-- Bootstrap 4 Example: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+    </div>
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 3</h3>        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- Bootstrap 3 vs. Bootstrap 4 -->
+<!-- Bootstrap 4 is the newest version of Bootstrap; with new components, faster stylesheet and more responsiveness -->
+<!-- Bootstrap 4 supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 9 and down is not supported -->
+<!-- If you require IE8-9 support, use Bootstrap 3. It is the most stable version of Bootstrap, and it is still supported by the team for critical bugfixes and documentation changes. However, no new features will be added to it -->
+
+
+
+
+<!-- Why Use Bootstrap? -->
+<!-- 
+    Advantages of Bootstrap:
+    - Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap
+    - Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops
+    - Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework
+    - Browser compatibility: Bootstrap 4 is compatible with all modern browsers (Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera)
+-->
+
+
+
+
+<!-- Where to Get Bootstrap 4? -->
+<!-- 
+    There are two ways to start using Bootstrap 4 on your own web site:
+    1)Include Bootstrap 4 From a CDN
+    2)Download Bootstrap 4 From getbootstrap.com
+-->
+
+
+<!-- 1)Include Bootstrap 4 from a CDN -->
+<!-- Bootstrap 4'ü kendiniz indirmek ve barındırmak istemiyorsanız, bunu bir CDN'den (Content Delivery Network) ekleyebilirsiniz -->
+<!-- MaxCDN, Bootstrap'ın CSS ve JavaScript'i için CDN desteği sağlar. Ayrıca jQuery eklemeniz gerekir: -->
+
+<!-- MaxCDN:-->
+<!-- Latest Compiled and Minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest Compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+<!-- 
+    NOT: 
+    Bootstrap 4 CDN kullanmanın bir avantajı:
+    Birçok kullanıcı, başka bir siteyi ziyaret ederken BootBrap 4'ü MaxCDN'den zaten indirmiştir 
+    Sonuç olarak, sitenizi ziyaret ettiklerinde önbellekten yüklenir, bu da daha hızlı yükleme süresine yol açar 
+    Ayrıca, çoğu CDN, bir kullanıcı ondan bir dosya istediğinde, dosyaya en yakın sunucudan sunulmasını sağlar ve bu da daha hızlı yükleme süresine yol açar
+-->
+<!-- 
+    NOT:
+    jQuery ve Popper?
+    Bootstrap 4, JavaScript bileşenleri (jipler, araç ipuçları, popovers vb.) İçin jQuery ve Popper.js kullanır 
+    Ancak, Bootstrap'in sadece CSS bölümünü kullanıyorsanız, bunlara ihtiyacınız yoktur
+-->
+
+
+
+
+<!-- 2)Download Bootstrap 4 From getbootstrap.com -->
+<!-- Bootstrap 4'ü kendiniz indirmek ve barındırmak istiyorsanız, https://getbootstrap.com/ adresine gidin ve oradaki talimatları izleyin -->
+<!-- Aşağıda Bootstrap 4 ile ilk web sayfasının oluşturulmasının adımları vardır -->
+
+
+<!-- 1)Add the HTML5 doctype-->
+<!-- Bootstrap 4, HTML5 dokümanı gerektiren HTML öğelerini ve CSS özelliklerini kullanır -->
+<!-- HTML5 belgesini her zaman sayfanın başına, lang özelliği ve doğru karakter kümesiyle birlikte ekleyin: -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+</html>
+
+
+
+
+<!-- 2)Bootstrap 4 is mobile-first -->
+<!-- Bootstrap 4 is designed to be responsive to mobile devices -->
+<!-- Mobile-first styles are part of the core framework -->
+<!-- To ensure proper rendering and touch zooming, add the following <meta> tag inside the <head> element: -->
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+
+
+<!-- The "width=device-width" part sets the width of the page to follow the screen-width of the device (which will vary depending on the device) -->
+<!-- The "initial-scale=1" part sets the initial zoom level when the page is first loaded by the browser -->
+
+
+
+
+<!-- 3)Containers -->
+<!-- Bootstrap 4 also requires a containing element to wrap site contents -->
+<!-- 
+    Seçim yapabileceğiniz iki konteyner sınıfı vardır:
+    1)The ".container" class provides a responsive "fixed width container"
+    2)The ".container-fluid" class provides a "full width container", spanning the entire width of the viewport 
+-->
+
+
+<!-- 1)Container -->
+<!-- Bir alt başlıkta Container'ları görcez. Orada buna ait örnek olacak -->
+<div class="container">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+
+<!-- 2)Container Fluid -->
+<!-- Bir alt başlıkta Container'ları görcez. Orada buna ait örnek olacak -->
+<div class="container-fluid">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 CONTAINERS __________ -->
+<!-- You learned from the previous chapter that Bootstrap requires a containing element to wrap site contents -->
+<!-- 
+    Containers are used to pad the content inside of them, and there are two container classes available:
+    1)The ".container" class provides a responsive "fixed width container"
+    2)The ".container-fluid" class provides a "full width container", spanning the entire width of the viewport
+-->
+
+
+<!-- 1)Fixed Container -->
+<!-- Use the ".container" class to create a responsive, fixed-width container -->
+<!-- Note that its width (max-width) will change on different screen sizes -->
+<!-- Open the example below and resize the browser window to see that the container width will change at different breakpoints: -->
+<div class="container">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+<!-- Example: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">   <!-- Latest Compiled and Minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>               <!-- jQuery Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>      <!-- Popper JS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>            <!-- Latest Compiled JavaScript-->
+</head>
+<body>
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p> 
+        <p>The .container class provides a responsive fixed width container.</p>
+        <p>Resize the browser window to see that its width (max-width) will change at different breakpoints.</p>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- 2)Fluid Container -->
+<!-- Use the ".container-fluid" class to create a full width container, that will always span the entire width of the screen (width is always 100%) -->
+<div class="container-fluid">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+<!-- Example: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container-fluid class.</p>
+        <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>           
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- *Container Padding* -->
+<!-- By default, containers have 15px left and right padding, with no top or bottom padding -->
+<!-- Therefore, we often use spacing utilities, such as extra padding and margins to make them look even better -->
+<!-- For example, .pt-3 means "add a top padding of 16px" -->
+<!-- You will learn much more about spacing utilities, in our BS4 Utilities Chapter -->
+<div class="container pt-3"></div>
+
+
+
+
+<!-- *Container Border and Color* -->
+<!-- Other utilities, such as borders and colors, are also often used together with containers -->
+<!-- You will learn much more about colors and border utilities, in our BS4 Colors Chapter and BS4 Utilities Chapter -->
+<!-- NOT: İlgili Kütüphaneleri eklemediğimiz için web sitesinde aşağıda yazdığım şekilde gözükmez !!! -->
+<body>
+    <div class="container p-3 my-3 border">
+        <h1>My First Bootstrap Pagea</h1>
+        <p>This container has a border and some extra padding and margins.</p>
+    </div>
+      
+    <div class="container p-3 my-3 bg-dark text-white">
+        <h1>My First Bootstrap Page</h1>
+        <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+    </div>
+      
+    <div class="container p-3 my-3 bg-primary text-white">
+        <h1>My First Bootstrap Page</h1>
+        <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+    </div>
+</body><br><br>
+
+
+
+
+<!-- *Responsive Containers* -->
+<!-- You can also use the ".container-sm|md|lg|xl" classes to create responsive containers -->
+<!-- The "max-width" of the container will change on different screen sizes/viewports -->
+<div class="container">
+    <h1>Responsive Containers</h1>
+    <p>Resize the browser window to see the effect.</p>
+
+    <div class="container-sm border">.container-sm</div>
+    <div class="container-md mt-3 border">.container-md</div>
+    <div class="container-lg mt-3 border">.container-lg</div>
+    <div class="container-xl mt-3 border">.container-xl</div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 GRID BASIC __________ -->
+
+<!-- *Bootstrap 4 Grid System* -->
+<!-- Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page -->
+<!-- 12 sütunun tümünü tek tek kullanmak istemiyorsanız, daha geniş sütunlar oluşturmak için sütunları birlikte gruplayabilirsiniz -->
+<!-- The grid system is responsive, and the columns will re-arrange automatically depending on the screen size -->
+<!-- Toplamın 12'ye kadar eklediğinden emin olun (kullanılabilir 12 sütunun tümünü kullanmanız gerekmez) -->
+
+
+
+
+<!-- *Grid Classes* -->
+<!-- 
+    The Bootstrap 4 grid system has five classes:
+    1).col- (extra small devices - screen width less than 576px)
+    2).col-sm- (small devices - screen width equal to or greater than 576px)
+    3).col-md- (medium devices - screen width equal to or greater than 768px)
+    4).col-lg- (large devices - screen width equal to or greater than 992px)
+    5).col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+-->
+<!-- The classes above can be combined to create more dynamic and flexible layouts -->
+<!-- NOTE: Each class scales up, so if you wish to set the same widths for "sm" and "md", you only need to specify "sm" -->
+
+
+
+
+<!-- *Basic Structure of a Bootstrap 4 Grid* -->
+<!-- The following is a basic structure of a Bootstrap 4 grid: -->
+
+
+<!-- First Example: Control the column width, and how they should appear on different devices -->
+<div class="row">
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+</div>
+<div class="row">
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+</div><br><br>
+  
+
+<!-- Second Example: Or let Bootstrap automatically handle the layout -->
+<div class="row">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div><br><br>
+
+
+<!-- 
+    First Example: 
+    Create a row: <div class="row">
+    Then, add the desired number of columns: Tags with appropriate ".col-*-*" classes
+    First star (*) represents the responsiveness: sm, md, lg or xl
+    Second star (*) represents a number, which should add up to 12 for each row
+-->
+<!-- 
+    Second Example:
+    Instead of adding a number to each col, let bootstrap handle the layout, to create equal width columns: two "col" elements = 50% width to each col. three cols = 33.33% width to each col. four cols = 25% width, etc
+    You can also use ".col-sm|md|lg|xl" to make the columns responsive
+-->
+
+
+<!-- Aşağıda Basic BS4 Grid Layout'uyla ilgili örnekler var -->
+
+
+
+
+<!-- Example 1: Three Equal Columns -->
+<!-- The following example shows how to create 3 equal-width columns, on all devices and screen widths -->
+<body>
+    <div class="container">
+        <h1>Three Equal Width Columns</h1>
+
+        <div class="row">
+            <div class="col" style="background-color:lavender;">.col</div>
+            <div class="col" style="background-color:orange;">.col</div>
+            <div class="col" style="background-color:lavender;">.col</div>
+        </div>
+    </div>
+</body><br><br>
+
+
+
+
+
+<!-- Example 2: Responsive Columns -->
+<!-- The following example shows how to create 4 equal-width columns starting at tablets and scaling to extra large desktops -->
+<!-- NOT: Genişliği 576px'den az olan cep telefonlarında veya ekranlarda, sütunlar otomatik olarak üst üste yığınlanır -->
+<!-- Aşağıdaki örnekte ekran penceresi 576px'i geçtiği anda alt alta olan sütunlar yanyana gelmiş olur -->
+<body>
+    <div class="container">
+        <h1>Responsive Columns</h1>
+
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+        </div>
+    </div>
+</body><br><br>
+
+
+
+
+<!-- Example 3: Two Unequal Responsive Columns -->
+<!-- The following example shows how to get two various-width columns starting at tablets and scaling to large extra desktops -->
+<!-- Üstte olduğu üzere yine ekran penceresi 576px'den az olduğu durumlarda sütunlar alt alta durur -->
+<body>
+    <div class="container">
+        <h1>Responsive Columns</h1>
+
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-3</div>
+        </div>
+    </div>
+</body><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 TYPOGRAPHY __________ -->
+
+<!-- *Bootstrap 4 Default Settings* -->
+<!-- Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5 -->
+<!-- The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif -->
+<!-- In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default) -->
+
+
+
+
+<!-- <h1> - <h6> -->
+<!-- Bootstrap 4 styles HTML headings (<h1> to <h6>)  with a bolder font-weight and an increased font-size -->
+<div class="container">
+    <h1>h1 Bootstrap Heading (2.5rem = 40px)</h1>
+    <h2>h2 Bootstrap Heading (2rem = 32px)</h2>
+    <h3>h3 Bootstrap Heading (1.75rem = 28px)</h3>
+    <h4>h4 Bootstrap Heading (1.5rem = 24px)</h4>
+    <h5>h5 Bootstrap Heading (1.25rem = 20px)</h5>
+    <h6>h6 Bootstrap Heading (1rem = 16px)</h6>
+</div><br><br>
+
+
+
+
+<!-- *Display Headings* -->
+<!-- 
+    Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight), and there are four classes to choose from: 
+    .display-1 
+    .display-2 
+    .display-3 
+    .display-4
+-->
+<!-- Heading'lere oranla daha büyük ve ince font tipiyle yazılırlar -->
+<div class="container">
+    <h1>Display Headings</h1>
+
+    <h1 class="display-1">Display 1</h1>    <!-- En büyüğü -->
+    <h1 class="display-2">Display 2</h1>
+    <h1 class="display-3">Display 3</h1>
+    <h1 class="display-4">Display 4</h1>    <!-- En küçüğü-->
+</div><br><br>
+
+
+
+
+<!-- <small> Element -->
+<!-- In Bootstrap 4 the HTML <small> element is used to create a lighter, secondary text in any heading -->
+<div class="container">
+    <h1>small Element</h1>
+
+    <h1>h1 heading <small>secondary text</small></h1>
+    <h2>h2 heading <small>secondary text</small></h2>
+    <h3>h3 heading <small>secondary text</small></h3>
+    <h4>h4 heading <small>secondary text</small></h4>
+    <h5>h5 heading <small>secondary text</small></h5>
+    <h6>h6 heading <small>secondary text</small></h6>
+</div><br><br>
+
+
+
+
+<!-- <mark> Element -->
+<!-- Bootstrap 4 will style the HTML <mark> element with a yellow background color and some padding -->
+<!-- Mark tag'i içerisinde yer alan cümlenin arka plan rengi sarı olur (fosforlu kalemle üstundan geçilmiş gibi) -->
+<div class="container">
+    <h1>mark Element (Highlighted Text)</h1>
+
+    <p>Ahmet <mark>Sami</mark> Yeniçeri</p>
+</div><br><br>
+
+
+
+
+<!-- <abbr> Element -->
+<!-- Bootstrap 4 will style the HTML <abbr> element with a dotted border bottom -->   
+<!-- <abbr> elementleri içerisinde yazılı olan kısmın altı nokta nokta çizili olur -->
+<!-- Kısaltmalarda kullanılır (TRT gibi) -->
+<!-- "title" attribute'unu ekleyerek kısaltmanın üstüne geldiğimizde kelimenin açılımını gösterebiliriz -->
+<div class="container">
+    <h1>abbr Element</h1>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948</p>
+</div><br><br>
+
+
+
+
+<!-- <blockquote> Element -->
+<!-- Add the ".blockquote" class to a <blockquote> when quoting blocks of content from another source -->  
+<!-- Başka bir kaynaktan alıntı yapıldığı zaman kullanılır -->
+<div class="container">
+    <h1>blockquote Element (Alıntılar)</h1>
+
+    <blockquote class="blockquote">
+        <p>
+            For 50 years, WWF has been protecting the future of nature. 
+            The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States
+        </p>
+        <footer class="blockquote-footer">From WWF's website</footer>
+    </blockquote>
+</div><br><br>
+
+
+
+
+<!-- <dl> Element -->
+<!-- The dl element indicates a description list -->
+<div class="container">
+    <h1>dl Element (Description Lists)</h1>
+    
+    <dl>
+        <dt>Coffee</dt>
+        <dd>-black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>-while cold drink</dd>
+    </dl>
+</div><br><br>
+
+
+
+
+<!-- <code> Element -->
+<!-- <code> etiketleriyle çevrili metinler tek aralıklı yazı tipinde görüntülenir -->
+<!-- Genelde kırmızı fontla yazılı ve normal metinden bir tık küçük olurlar -->
+<div class="container">
+    <h1>code Element</h1>
+
+    <p>The following HTML elements: <code>span</code>, <code>section</code> and <code>div</code> is important</p>
+</div><br><br>
+
+
+
+
+<!-- <kbd> Element -->
+<!-- Genellikle klavye komutlarını belirtmek için kullanılır (ALT + F4)-->
+<div class="container">
+    <h1>kbd Element</h1>
+
+    <p>Yazdırma işlemi için <kbd>ctrl + p</kbd> kullanılır</p>
+</div><br><br>
+
+
+
+
+<!-- <pre> Element -->
+<!-- Normalde birden çok satır yazmak istediğimizde <p> etiketinin sonunda alt satıra inerken <br> kullanırız-->
+<!-- <pre> etiketi sayesinde ekrana nasıl yazarsak sitede o şekilde gözükür ve alt satıra inmek için <br> ye ihtiyaç duymayız -->
+<div class="container">
+    <h1>pre Element</h1>
+
+    <pre>
+    FENERBAHÇE
+    SEN ÇOK YAŞA
+    CANIM FEDA OLSUN SANA
+    </pre>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 COLORS __________ -->
+
+<!-- *Text Colors* -->
+<!-- Bootstrap 4 has some contextual classes that can be used to provide "meaning through colors" -->
+<!-- 
+    The classes for text colors are:
+    .text-muted
+    .text-primary
+    .text-success
+    .text-info
+    .text-warning
+    .text-danger
+    .text-secondary
+    .text-white
+    .text-dark
+    .text-body (default body color/often black) 
+    .text-light:
+-->
+<div class="container">
+    <h1>Colors</h1>
+
+    <p class="text-muted">This text is muted</p>
+    <p class="text-primary">This text is imporant</p>
+    <p class="text-success">This text is indicated success</p>
+    <p class="text-info">This text represents some information.</p>
+    <p class="text-warning">This text represents a warning</p>
+    <p class="text-danger">This text represents danger</p>
+    <p class="text-secondary">Secondary text</p>
+    <p class="text-dark">This text is dark grey</p>
+    <p class="text-body">Default body color (often black)</p>
+    <p class="text-light">This text is light grey (on white background)</p>
+    <p class="text-white">This text is white (on white background)</p>
+</div><br><br>
+
+
+<!-- Contextual text classes can also be used on links, which will add a darker hover color -->
+<div class="container">
+    <h1>Color Links</h1>
+
+    <a href="#" class="text-muted">Muted Link</a><br>
+    <a href="#" class="text-info">Info Link</a><br>
+    <a href="#" class="text-dark">Dark Grey Link</a><br>
+</div><br><br>
+
+
+<!-- You can also add 50% opacity for black or white text with the .text-black-50 or .text-white-50 classes -->
+<div class="container">
+    <h1>Opacity</h1>
+
+    <p class="text-black-50">Black text with 50% opacity on background</p>
+    <p class="text-white-50 bg-dark">White text with 50% opacity on black bacground</p>
+</div><br><br>
+
+
+
+
+<!-- *Background Colors* -->
+<!-- 
+    The classes for background colors are: 
+    .bg-primary
+    .bg-success
+    .bg-info
+    .bg-warning
+    .bg-danger
+    .bg-secondary
+    .bg-dark
+    .bg-light
+-->
+<!-- NOTE: Note that background colors do not set the text color, so in some cases you'll want to use them together with a .text-* class -->
+<div class="container">
+    <h1>Background Colors</h1>
+
+    <p class="bg-primary">This text is important</p>
+    <p class="bg-success text-white">This text indicates success</p>
+    <p class="bg-info text-white">This text represents some information</p>
+    <p class="bg-warning text-white">This text represents a warning</p>
+    <p class="bg-danger text-white">This text represents danger</p>
+    <p class="bg-secondary text-white">Secondary background color</p>
+    <p class="bg-dark text-white">Dark grey background color</p>
+    <p class="bg-light text-dark">Light grey background color</p>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 TABLES __________ -->
+
+<!-- *Bootstrap 4 Basic Table* -->
+<!-- A basic Bootstrap 4 table has a light padding and horizontal dividers -->
+<!-- The ".table" class adds basic styling to a table -->
+<div class="container">
+    <h2>Basic Table</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Bordered Table* -->
+<!-- The ".table-bordered" class adds borders on all sides of the table and cells-->
+<div class="container">
+    <h2>Bordered Table</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Hover Rows* -->
+<!-- The ".table-hover" class adds a hover effect (grey background color) on table rows-->
+<!-- İmleci tablo elemanlarına getirdiğimiz zaman gri arka plan rengi oluşur -->
+<div class="container">
+    <h2>Hower Rows</h2>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Dark Table* -->
+<!-- The ".table-dark" class adds a black background to the table -->
+<div class="container">
+    <h2>Dark Table</h2>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Dark Striped Table* -->
+<!-- Combine ".table-dark" and ".table-striped" to create a dark, striped table:-->
+<div class="container">
+    <h2>Dark Stripped Table</h2>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Hoverable Dark Table* -->
+<!-- The ".table-hover" class adds a hover effect (grey background color) on table rows-->
+<!-- ".table-dark" class'ını da eklediğimiz için arka plan koyu olacak -->
+<!-- İmleci tablo elemanlarına getirdiğimiz zaman gri arka plan rengi oluşur -->
+<div class="container">
+    <h2>Hoverable Dark Table</h2>
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Borderless Table* -->
+<!-- The ".table-borderless" class removes borders from the table -->
+<div class="container">
+    <h2>Borderless Table</h2>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Contextual Classes* -->
+<!-- Contextual classes can be used to color the whole table <table>, the table rows <tr> or table cells <td> -->
+<!-- 
+    The classes that can be used are:
+    .table-primary     ->  Blue: Indicates an important action
+    .table-success     ->  Green: Indicates a successful or positive action
+    .table-info        ->  Light blue: Indicates a neutral informative change or action
+    .table-warning     ->  Orange: Indicates a warning that might need attention
+    .table-danger      ->  Red: Indicates a dangerous or potentially negative action
+    .table-active      ->  Grey: Applies the hover color to the table row or table cell
+    .table-secondary   ->  Grey: Indicates a slightly less important action
+    .table-light       ->  Light grey table or table row background
+    .table-dark        ->  Dark grey table or table row background
+-->
+<div class="container">
+    <h2>Contextual Table</h2>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary">
+                <td>Ahmet</td>
+                <td>Yeniçeri</td>
+                <td>22</td>
+            </tr>
+            <tr class="table-secondary">
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+            <tr class="table-success">
+                <td>Alperen</td>
+                <td>Kopuz</td>
+                <td>22</td>
+            </tr>
+            <tr class="table-danger">
+                <td>Safa</td>
+                <td>Uraşkan</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Table Body Colors* -->
+<!-- <tbody> etkiketine class ekleyerek farklı arka plan renkleri verebiliriz -->
+<div class="container">
+    <h2>TBODY'ye Class Ekleme</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody class="table-info">
+            <tr>
+                <td>Ahmet</td>
+                <td>Yeniçeri</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+<!-- *Table Head Colors* -->
+<!-- The ".thead-dark" class adds a black background to table headers -->
+<!-- The ".thead-light" class adds a grey background to table headers-->
+<div class="container">
+    <h2>THEAD'e Class Ekleme</h2>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Small Table* -->
+<!-- The ".table-sm" class makes the table smaller by cutting cell padding in half -->
+<div class="container">
+    <h2>Small Table</h2>
+
+    <table class="table table-sm">
+        <thead class>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Sami</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Hüseyin</td>
+                <td>Akyüz</td>
+                <td>21</td>
+            </tr>
+        </tbody>    
+    </table>
+</div><br><br>
+
+
+
+
+<!-- *Responsive Tables* -->
+<!-- The ".table-responsive" class adds a scrollbar to the table when needed (when it is too big horizontally) -->
+<div class="container">
+    <h2>Responsive Table</h2>
+
+    <div class="table-responsive">
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Sex</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Anna</td>
+                    <td>Pitt</td>
+                    <td>35</td>
+                    <td>New York</td>
+                    <td>USA</td>
+                    <td>Female</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><br><br>
+
+
+<!-- 
+    NOTE: You can also decide when the table should get a scrollbar, depending on screen width
+    CLASS                   SCREEN WIDTH
+    .table-responsive-sm	< 576px
+    .table-responsive-md	< 768px
+    .table-responsive-lg	< 992px
+    .table-responsive-xl	< 1200px
+-->
+<div class="container">
+    <h2>Responsive Table Sm</h2>
+    <p>table-responsive-sm class'ında ekran 576px'den küçükse scroll ortaya çıkar !!!</p>
+
+    <div class="table-responsive-sm">
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Sex</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Anna</td>
+                    <td>Pitt</td>
+                    <td>35</td>
+                    <td>New York</td>
+                    <td>USA</td>
+                    <td>Female</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 IMAGES __________ -->
+
+<!-- *Bootstrap 4 Image Shapes* -->
+<!-- 
+    There are 3 image shapes:
+    1)Rounded Corners
+    2)Circle
+    3)Thumbnail
+-->
+
+
+<!-- 1)Rounded Corners -->
+<!-- The ".rounded" class adds rounded corners to an image-->
+<div class="container">
+    <h2>Rounded Corners</h2>
+
+    <img src="fb.jpg" class="rounded" alt="Fenerbahçe" width="300" height="300">
+</div><br><br>
+
+
+
+
+<!-- 2)Circle-->
+<!-- The ".rounded-circle" class shapes the image to a circle-->
+<div class="container">
+    <h2>Circle</h2>
+
+    <img src="fb.jpg" class="rounded-circle" alt="Fenerbahçe" width="300" height="300">
+</div><br><br>
+
+
+
+
+<!-- 3)Thumbnail -->
+<!-- The ".img-thumbnail" class shapes the image to a thumbnail (bordered) -->
+<div class="container">
+    <h2>Thumbnail</h2>
+
+    <img src="fb.jpg" class="img-thumbnail" alt="Fenerbahçe" width="300" height="300">
+</div><br><br>
+
+
+
+
+<!-- *Aligning Images* -->
+<!-- 
+    .float-right:  Float an image to the right
+    .float-left:   Float an image to the left
+-->
+<div class="container">
+    <h2>Aligning Images</h2>
+
+    <img src="fb.jpg" class="float-right rounded-circle" alt="Fenerbahçe" width="300" height="300">
+    <img src="alex.jpg" class="float-left" alt="Alex" width="300" height="300">
+</div><br><br>
+
+
+
+
+<!-- *Centered Image* -->
+<!-- Center an image by adding the utility classes ".mx-auto" (margin:auto) and ".d-block" (display:block) to the image -->
+<div class="container">
+    <h2>Centered Image</h2>
+
+    <img src="fb.jpg" class="mx-auto d-block" alt="Fenerbahçe" width="300" height="300">
+</div><br><br>
+
+
+
+
+<!-- *Responsive Images* -->
+<!-- Images come in all sizes. So do screens. Responsive images automatically adjust (düzeltmek) to fit the size of the screen -->
+<!-- Create responsive images by adding an ".img-fluid" class to the <img> tag. The image will then scale nicely to the parent element -->
+<!-- The ".img-fluid" class applies max-width: 100%; and height: auto; to the image -->
+<div class="container">
+    <h2>Responsive Images</h2>
+    <p>The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect)</p>
+
+    <img src="fb.jpg" class="img-fluid" alt="Fenerbahçe" width="350" height="300">
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 JUMBOTRON __________ -->
+<!-- A jumbotron indicates a big grey box for calling extra attention to some special content or information -->
+<!-- NOTE: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes -->
+<!-- Use a <div> element with class .jumbotron to create a jumbotron -->
+<!-- "jumbotron" class'ının içerisinde yazılan şeyler gri bir kutu içerisinde yer alır -->
+<div class="container">
+    <h1>Jumbotron</h1>
+
+    <div class="jumbotron">
+        <h1>FENERBAHÇE</h1>
+        <p>Fenerbahçe 1907'de kurulmuştur</p>
+    </div>
+    
+    <!-- Bu 2 paragraf jumbotron class'ının içinde değil !!! -->
+    <p>Paragraph 1</p>      
+    <p>Paragraph 2</p>
+</div><br><br>
+
+
+
+
+<!-- *Full-width Jumbotron* -->
+<!-- If you want a full-width jumbotron without rounded borders, add the ".jumbotron-fluid" class and a ".container" or ".container-fluid" inside of it -->
+<!-- Gri kutu yatay olarak tüm ekranı kaplar -->
+<h1>Full-width Jumbotron</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1>FENERBAHÇE</h1>
+        <p>Fenerbahçe 1907'de kurulmuştur</p>
+    </div>
+</div>
+<div class="container">
+    <p>Paragraph 1</p>      
+    <p>Paragraph 2</p>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 ALERTS __________ -->
+
+<!-- 
+    Alerts are created with the ".alert" class, followed by one of the contextual classes:
+    .alert-success 
+    .alert-info
+    .alert-warning 
+    .alert-danger 
+    .alert-primary 
+    .alert-secondary
+    .alert-light
+    .alert-dark
+-->
+<div class="container">
+    <h2>Alerts</h2>
+
+    <div class="alert alert-danger">
+        <strong>Danger:</strong> Danger alert
+    </div>
+    <div class="alert alert-dark">
+        <strong>Dark:</strong> Dark alert
+    </div>
+    <div class="alert alert-info">
+        <strong>Info:</strong> Info alert
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Alert Links* -->
+<!-- Add the ".alert-link" class to any links inside the alert box to create "matching colored links" -->
+<!--
+    NOTE: Why do we put a # in the href attribute of the link?
+    Since we do not have any page to link it to, and we do not want to get a "404" message, we put # as the link. In real life it should of course been a real URL to the "Search" page 
+-->
+<div class="container">
+    <h2>Alert Links</h2>
+
+    <div class="alert alert-success">
+        <strong>Success:</strong> You should <a href="#" class="alert-link">read this message</a>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Closing Alerts* -->
+<!-- To close the alert message, add a ".alert-dismissible" class to the alert container -->
+<!-- Then add class="close" and data-dismiss="alert" to a link or a button element (when you click on this the alert box will disappear) -->
+<div class="container">
+    <h2>Closing Alerts</h2>
+
+    <div class="alert alert-primary alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Primary:</strong> Primary alert (Click x to close alert)
+    </div>
+</div><br><br>
+
+
+<!-- NOTE: &times; (×) is an HTML entity that is the preferred icon for close buttons, rather than the letter "x" -->
+
+
+
+
+<!-- *Animated Alerts* -->
+<!-- The ".fade" and ".show" classes adds a fading effect when closing the alert message -->
+<div class="container">
+    <h2>Animated Alerts</h2>
+
+    <div class="alert alert-light alert-dismissible fade show">
+        <button tyoe="button" class="close" data-dismiss="alert">&times;</button> 
+        <strong>Light Alert:</strong> Click X to close this alert
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 BUTTONS __________ -->
+
+<!-- *Button Styles* -->
+<!-- 
+    Bootstrap 4 provides different styles of buttons:
+    Basic
+    Primary
+    Secondary
+    Success
+    Info
+    Warning
+    Danger
+    Dark
+    Light
+    Link
+-->
+<!-- NOT: "type" attribute'unu kullanmak şart değildir !!!-->
+<div class="container">
+    <h2>Button Styles</h2>
+
+    <button type="button" class="btn">Basic</button><br>
+    <button type="button" class="btn btn-primary">Primary</button><br>
+    <button class="btn btn-success">Success</button><br>
+</div><br><br>
+
+
+<!-- The button classes can be used on <a>, <button> or <input> elements: -->
+<div class="container">
+    <h2>Button Elements</h2>
+
+    <a href="#" class="btn btn-info" role="button">Link Button</a><br>
+    <button type="button" class="btn btn-info">Button</button><br>
+    <input type="button" class="btn btn-info" value="Input Button"><br>
+    <input type="submir" class="btn btn-info" value="Submit Button"><br>
+</div><br><br>
+
+
+
+
+<!-- *Button Outline* -->
+<!-- Buton'un kenar çizgilerinin ve içerisindeki yazının rengini ayarlar -->
+<!-- İmleç butonun üzerinde değilken sadece dışları o renkte olup buton beyaz olur -->
+<!-- İmleç butonun üstüne getirildiği zaman buton o renge bürünür -->
+<!-- 
+    Bootstrap 4 provides eight outline/bordered buttons:
+    Primary
+    Secondary
+    Success
+    Info
+    Warning
+    Danger
+    Dark
+    Light
+-->
+<div class="container">
+    <h2>Button Outline</h2>
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+</div><br><br>
+
+
+
+
+<!-- *Button Sizes* -->
+<!-- Use the ".btn-lg" class for large buttons -->
+<!-- Use the ".btn-sm" class for small buttons -->
+<div class="container">
+    <h2>Button Sizes</h2>
+
+    <button type="button" class="btn btn-primary btn-lg">Large Primary Button</button>
+    <button type="button" class="btn btn-success btn-sm">Small Success Button</button>
+</div><br><br>
+
+
+
+
+<!-- *Block Level Buttons* -->
+<!-- Add class ".btn-block" to create a block level button that spans the entire width of the parent element -->
+<!-- Sayfanın tüm satırını kaplar -->
+<div class="container">
+    <h2>Block Level Button</h2>
+
+    <button type="button" class="btn btn-danger btn-block">Block Level Danger Button</button>
+</div><br><br>
+
+
+
+
+<!-- *Active/Disabled Buttons* -->
+<!-- A button can be set to an active (appear pressed) or a disabled (unclickable) state -->
+<!-- The class ".active" makes a button appear pressed -->
+<!-- And "disabled" attribute makes a button unclickable -->
+<!-- NOTE: <a> elements do not support the disabled attribute and must therefore use the ".disabled" class to make it visually appear disabled !!! -->
+<div class="container">
+    <h2>Active/Disabled Buttons</h2>
+
+    <button type="button" class="btn btn-primary active">Automatically Active Button</button><br>
+    <button type="button" class="btn btn-danger" disabled>You cannot click this button</button><br>
+    <a href="#" class="btn btn-primary disabled">You cannot click this link button</a>
+</div><br><br>
+
+
+
+
+<!-- *Spinner Buttons* -->
+<!-- You can also add "spinners" to a button (dönen bir simge olur) -->
+<div class="container">
+    <h2>Spinner Button</h2>
+
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        Spinning button 1
+    </button>
+    <button class="btn btn-danger">
+        <span class="spinner-border spinner-border-sm"></span>
+        Spinning button 2
+    </button>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 BUTTON GROUPS __________ -->
+
+<!-- *Button Groups* -->
+<!-- Bootstrap 4 allows you to group a series of buttons together (on a single line) in a button group -->
+<!-- Use a <div> element with class ".btn-group" to create a button group -->
+<div class="container">
+    <h2>Button Groups</h2>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Xiaomi</button>
+    </div>
+</div><br><br>
+
+
+<!-- NOTE: Instead of applying button sizes to every button in a group, use class ".btn-group-lg" for a large button group or the ".btn-group-sm" for a small button group -->
+<div class="container">
+    <h2>Different Sizes of Button Groups</h2>
+
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Xiaomi</button>
+    </div><br><br>
+
+    <div class="btn-group btn-group-sm">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Xiaomi</button>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Button Groups* -->
+<!-- Bootstrap 4 also supports vertical button groups -->
+<!-- Use the class ".btn-group-vertical" to create a vertical button group -->
+<div class="container">
+    <h2>Vertical Button Group</h2>
+
+    <div class="btn-group-vertical">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Xiaomi</button>
+    </div>
+</div><br></br>
+
+
+
+
+<!-- *Nesting Button Groups & Dropdown Menus* -->
+<!-- Nest button groups to create dropdown menus (you will learn more about dropdowns in a later chapter) -->
+<div class="container">
+    <h2>Nesting Button and Dropdown Menu</h2>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Phone</a>
+                <a class="dropdown-item" href="#">Scooter</a>
+            </div> 
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+
+<!-- *Split Button Dropdowns* -->
+<div class="container">
+    <h2>Split Button</h2>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Button Group With Dropdown* -->
+<div class="container">
+    <h2>Vertical Button Group With Dropdown</h2>
+
+    <div class="btn-group-vertical">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Phone</a>
+                <a class="dropdown-item" href="#">Scooter</a>
+            </div> 
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Button Groups Side by Side* -->
+<!-- Button groups are "inline" by default, which makes them appear side by side when you have multiple groups -->
+<!-- <br> koymadığın sürece buton grupları otomatikman yanyana gelir -->
+<div class="container">
+    <h2>Button Group Side by Side</h2>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Xiaomi</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-primary">BMW</button>
+        <button class="btn btn-primary">Ferrari</button>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 BUTTON BADGES __________ -->
+<!-- Badges are used to add additional information to any content -->
+<!-- Use the ".badge" class together with a contextual class (like .badge-secondary) within <span> elements to create rectangular badges -->
+<div class="container">
+    <h1>Badges</h1>
+
+    <h1>Example heading <span class="badge badge-secondary">New</h1>
+    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+</div><br><br>
+
+
+
+
+<!-- *Contextual Badges* -->
+<!-- Use any of the contextual classes (.badge-*) to change the color of a badge -->
+<div class="container">
+    <h1>Contextual Badges</h1>
+
+    <span class="badge badge-primary">Primary badge</span>
+    <span class="badge badge-secondary">Secondary badge</span>
+    <span class="badge badge-danger">Danger badge</span>
+</div><br><br>
+
+
+
+
+<!-- *Pill Badges* -->
+<!-- Use the ".badge-pill" class to make the badges more round -->
+<div class="container">
+    <h1>Pill Badges</h1>
+
+    <span class="badge badge-pill badge-primary">Rounded primary badge</span>
+    <span class="badge badge-pill badge-warning">Rounded warning badge</span>
+    <span class="badge badge-pill badge-dark">Rounded dark badge</span>
+</div><br><br>
+
+
+
+
+<!-- *Badge Inside an Element* -->
+<!-- An example of using a badge inside a button: -->
+<div class="container">
+    <h1>Badge Inside a Button</h1>
+
+    <button class="btn btn-primary">
+        Messages <span class="badge badge-secondary">5</span>
+    </button>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 PROGRESS BARS __________ -->
+<!-- A progress bar can be used to show a user how far along he/she is in a process -->
+<!-- To create a default progress bar, add a ".progress" class to a container element and add the ".progress-bar" class to its child element -->
+<!-- Use the CSS "width" property to set the width of the progress bar -->
+<!-- NOT: Width kısmında 20-30-40px falan da yazılabilir fakat yüzdeli yazmak daha mantıklı çünkü barın kaçta kaçının dolu olacağını daha rahat belirleriz !!! -->
+<!-- NOT: Width kısmını eklemezsek progress bar boş olur !!! -->
+<div class="container">
+    <h1>Progress Bar</h1>
+    
+    <div class="progress">
+        <div class="progress-bar" style="width: 50%;">Yarısı dolu</div>
+    </div><br>
+
+    <div class="progress">
+        <div class="progress-bar" style="width: 100%;">Tamamı dolu</div>
+    </div><br>
+
+    <div class="progress">
+        <div class="progress-bar" style="width: 70%;"></div>   <!-- Bara yazmamız şart değil -->
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Progress Bar Height* -->
+<!-- The height of the progress bar is 16px by default -->
+<!-- Use the CSS "height" property to change it -->
+<!-- NOTE: You must set the same height for the progress container and the progress bar -->
+<div class="container">
+    <h1>Different Sizes of Height</h1>
+    
+    <div class="progress" style="height: 16px;">
+        <div class="progress-bar" style="width: 65%; height: 16px;">16px Height (Default)</div>
+    </div><br>
+
+    <div class="progress" style="height: 25px;">
+        <div class="progress-bar" style="width: 65%; height: 25px;">25px Height</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Colored Progress Bar* -->
+<!-- By default, the progress bar is blue (primary) -->
+<!-- Use any of the Bootstrap 4 contextual background classes to its color -->
+<div class="container">
+    <h1>Colored Progress Bars</h1>
+    
+    <div class="progress">
+        <div class="progress-bar" style="width: 30%;">Primary (Default)</div>
+    </div><br>
+
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar bg-secondary" style="width: 20%; height: 20px;">Secondary</div>
+    </div><br>
+
+    <div class="progress" style="height: 30px;">
+        <div class="progress-bar bg-warning" stlye="width: 30%; height: 30px;">Warning</div>
+    </div><br>
+
+    <div class="progress" style="height: 40px;">
+        <div class="progress-bar bg-dark" style="width: 40%; height: 40px;">Dark</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Striped Progress Bars* -->
+<!-- Use the ".progress-bar-striped" class to add stripes to the progress bars -->
+<div class="container">
+    <h1>Striped Progress Bars</h1>
+    
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" style="width: 80%;">Primary</div>
+    </div><br>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" style="width: 50%;">Success</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Animated Progress Bar* -->
+<!-- Add the ".progress-bar-animated" class to animate the progress bar -->
+<div class="container">
+    <h1>Animated Progress Bars</h1>
+    
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%;">Primary</div>
+    </div><br>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 50%;">Success</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Multiple Progress Bars* -->
+<!-- Farklı progress barları aynı "progress" class'ında oluşturunca progress barlar yan yana gelir -->
+<div class="container">
+    <h1>Multiple Progress Bars</h1>
+    
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" style="width: 30%;">Striped Success</div>
+        <div class="progress-bar bg-warning" style="width: 50%;">Warning</div>
+        <div class="progress-bar bg-danger" style="width: 18%;">Danger</div>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 SPINNERS __________ -->
+<!-- To create a spinner/loader, use the ".spinner-border" class -->
+<!-- Fırıldak gibi dairesel şekilde dönen bir şey (Genelde loading efekti olarak kullanılır) -->
+<div class="container">
+    <h1>Spinners</h1>
+
+    <div class="spinner-border"></div>
+</div><br><br>
+
+
+
+
+<!-- *Colored Spinners* -->
+<div class="container">
+    <h1>Colorful Spinners</h1>
+
+    <div class="spinner-border text-muted"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-border text-success"></div>
+</div><br><br>
+
+
+
+
+<!-- *Growing Spinners* -->
+<!-- Use the ".spinner-grow" class if you want the spinner/loader to grow instead of spin (Dönme hareketi olmuyor) -->
+<!-- NOT: "spinner-border" class'ını kullanmayız !!! -->
+<div class="container">
+    <h1>Groving Spinners</h1>
+
+    <div class="spinner-grow"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-grow text-danger"></div>
+</div><br><br>
+
+
+
+
+<!-- *Spinner Size* -->
+<!-- Use ".spinner-border-sm" or ".spinner-grow-sm" to create a smaller spinner-->
+<div class="container">
+    <h1>Spinner Small Size</h1>
+
+    <div class="spinner-border spinner-border-sm"></div>
+    <div class="spinner-border spinner-border-sm text-danger"></div>
+    <div class="spinner-grow spinner-grow-sm"></div>
+    <div class="spinner-grow spinner-grow-sm text-info"></div>
+</div><br><br>
+
+
+
+
+<!-- *Spinner Buttons* -->
+<!-- You can also add spinners to a button, with or without text -->
+<div class="container">
+    <h1>Spinner With Button</h1>
+
+    <button class="btn btn-primary">
+        <span class="spinner-border"></span>
+    </button>
+
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        Loading
+    </button>
+
+    <button class="btn btn-info">
+        <span class="spinner-grow spinner-grow-sm text-danger"></span>
+        Loading
+    </button>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 PAGINATION (SAYFALARA NUMARA KOYMA) __________ -->
+
+<!-- *Basic Pagination* -->
+<!-- If you have a web site with lots of pages, you may wish to add some sort of pagination to each page -->
+<!-- To create a basic pagination, add the ".pagination" class to an <ul> element -->
+<!-- Then add the ".page-item" to each <li> element and a ".page-link" class to each link inside <li> -->
+<div class="container">
+    <h1>Pagination</h1>
+
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+    </ul>
+</div><br><br>
+
+
+<!-- 
+    NOT: 
+    href'lerdeki "javascript:void(0)" kısmını sayfa numaralarına tıkladığımızda bir yere gitmememiz için koyduk 
+    Sayfa numaralarına tıkladığımızda tıklama efekti oluşur fakat başka bir yere yönlendirme yapmaz 
+    "#" koyduğumuz zamanlarda numaralara tıklayınca sayfanın başına atıyor
+    Normal şartlarda href kısmına gidilmek istenen URL yazılır 
+-->
+
+
+
+
+<!-- *Active State* -->
+<!-- The ".active" class is used to "highlight" the current page -->
+<!-- 2 numaralı sayfanın arka plan rengi olacak -->
+<div class="container">
+    <h1>Active State</h1>
+
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Disabled State* -->
+<!-- The ".disabled" class is used for un-clickable links -->
+<!-- Previous kısmı basılamaz şekilde olacak -->
+<div class="container">
+    <h1>Disabled State</h1>
+
+    <ul class="pagination">
+        <li class="page-item disabled"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Pagination Sizing* -->
+<!-- Add class ".pagination-lg" for larger blocks or ".pagination-sm" for smaller blocks -->
+<div class="container">
+    <h1>Different Sizes</h1>
+
+    <!-- Large: -->
+    <ul class="pagination pagination-lg">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+
+    <!-- Small: -->
+    <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Pagination Alignment* -->
+<!-- Use utility classes to change the alignment of the pagination -->
+<div class="container">
+    <h1>Alignment</h1>
+
+    <!-- Left-aligned (Default) -->
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+
+    <!-- Center-aligned -->
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+
+    <!-- Right-aligned -->
+    <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Breadcrumbs* -->
+<!-- The ".breadcrumb" and ".breadcrumb-item" classes indicates the current page's location within a navigational hierarchy -->
+<!-- Sayfa numaraları bu kez kutucuklar içinde olmaz. Her biri birbirinden "/" ile ayrılır -->
+<div class="container">
+    <h1>Breadcrumb</h1>
+
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Turkey</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">England</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">ABD</a></li>
+    </ul>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 LIST GROUPS __________ -->
+
+<!-- *Basic List Groups* -->
+<!-- The most basic list group is an unordered list with list items -->
+<!-- To create a basic list group, add <ul> element with class ".list-group" -->
+<!-- Then add <li> elements with class ".list-group-item" -->
+<div class="container">
+    <h1>Basic List Group</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Active State* -->
+<!-- Use the ".active" class to highlight the current item -->
+<div class="container">
+    <h1>Active State</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item active">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *List Group With Linked Items* -->
+<!-- Use <div> instead of <ul> -->
+<!-- Use <a> instead of <li> -->
+<!-- 
+    NOT:
+    "list-group-item-action" class'ını eklersek imleç liste elamanının üstündeyken hover efekti olur 
+    Eklenilmediği durumlarda listedeki eleman link itemi şeklinde gözükür (mavi ve imleci üzerine getirdiğimiz zaman altı çizili olur)
+-->
+<div class="container">
+    <h1>List Group With Linked Items</h1>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item">First item</h>
+        <a href="#" class="list-group-item list-group-item-action">Second item</a>
+        <a href="#" class="list-group-item list-group-item-action">Third item</a>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Disabled Item* -->
+<!-- The ".disabled" class adds a lighter text color to the disabled item -->
+<!-- And when used on links, it will remove the hover effect -->
+<!-- NOT: Disabled eklediğimiz için 1. ve 2. itemin birbirinden farkı olmaz. İkisine de tıklyamayız !!! -->
+<div class="container">
+    <h1>Disabled Item</h1>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item disabled">First item</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Second item</a>
+        <a href="#" class="list-group-item">Third item</a>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Flush / Remove Borders* -->
+<!-- Use the ".list-group-flush" class to remove some borders and rounded corners -->
+<!-- Elemanlar dikdörtgen kutucuklar halinde ayrılmaz. Elemanların altında boydan boya tek çizgi olur -->
+<div class="container">
+    <h1>Flush / Remove</h1>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">First item</ul>
+        <li class="list-group-item">Second item</ul>
+        <li class="list-group-item">Third item</ul>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Horizontal List Groups* -->
+<!-- Use ".list-group-horizontal" class -->
+<div class="container">
+    <h1>Horizontal List Group</h1>
+
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Contextual Classes* -->
+<!-- <li> tag'indeki class'a eklenir -->
+<div class="container">
+    <h1>Colorful List Group</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-primary">First item</li>
+        <li class="list-group-item list-group-item-secondary">Second item</li>
+        <li class="list-group-item list-group-item-warning">Third item</li>
+        <li class="list-group-item list-group-item-success">Forth item</li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Link Items With Contextual Classes* -->
+<div class="container">
+    <h1>Link Items With Colorful List Group</h1>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-primary">First item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Second item</a>
+        <a href="#" class="list-group-item list-group-item-success">Third item</a>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *List Group with Badges* -->
+<!-- Combine ".badge" classes with utility/helper classes to add badges inside the list group -->
+<!-- NOT: Utility/Helper class'ını ileride görcez -->
+<div class="container">
+    <h1>List Group With Badges</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Inbox
+            <span class="badge badge-primary badge-pill">12</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Ads
+            <span class="badge badge-warning">50</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Junk
+            <span class="badge badge-danger badge-pill">99</span>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 CARDS __________ -->
+<!-- A card in Bootstrap 4 is a bordered box with some padding around its content -->
+<!-- It includes options for headers, footers, content, colors, etc -->
+
+
+<!-- *Basic Card* -->
+<!-- A basic card is created with the ".card" class -->
+<!-- Content inside the card has a ".card-body" class -->
+<div class="container">
+    <h1>Basic Card</h1>
+
+    <div class="card">
+        <div class="card-body">Basic Card</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Header and Footer* -->
+<!-- The ".card-header" class adds a heading to the card -->
+<!-- The ".card-footer" class adds a footer to the card -->
+<div class="container">
+    <h1>Header and Footer</h1>
+
+    <div class="card">
+        <div class="card-header">Header</div>
+        <div class="card-body">Body</div>
+        <div class="card-footer">Footer</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Contextual Cards* -->
+<div class="container">
+    <h1>Colorful Cards</h1>
+
+    <div class="card">
+        <div class="card-body">Basic Card</div>
+    </div><br>
+
+    <div class="card bg-primary text-white">
+        <div class="card-body">Primary White Text Card</div>
+    </div><br>
+
+    <div class="card bg-secondary">
+        <div class="card-body">Secondary Card</div>
+    </div><br>
+
+    <div class="card bg-warning">
+        <div class="card-body">Warning Card</div>
+    </div><br>
+
+    <div class="card badge-danger text-white">
+        <div class="card-body">Warning White Text Card</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Titles, Text and Links* -->
+<!-- Use ".card-title" to add card titles to any heading element -->
+<!-- The ".card-text" class is used to remove bottom margins for a <p> element if it is the last child (or the only one) inside ".card-body" -->
+<!-- The ".card-link" class adds a blue color to any link, and a hover effect -->
+<div class="container">
+    <h1>Titles, Text and Links</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Card Title</h4>
+            <p class="card-text">Example text</p>
+            <a href="#" class="card-link">Card Link 1</a>
+            <a href="#" class="card-link">Card Link 2</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Card Images* -->
+<!-- Add ".card-img-top" or ".card-img-bottom" to an <img> to place the image at the top or at the bottom inside the card -->
+<!-- NOTE: We added the image outside of the ".card-body" class to span the entire width -->
+<div class="container">
+    <h1>Card Image Top</h1>
+    
+    <div class="card" style="width: 250px;">
+        <img class="card-img-bottom" src="cvphoto.jpeg" alt="cv">
+        <div class="card-body">
+            <h3 class="card-title">Ahmet Sami Yeniçeri</h3>
+            <p class="card-text">Üsküdar Üniversitesi 4. Sınıf Bilgisayar Mühendisliği Öğrencisi</p>
+            <a href="#" class="btn btn-primary">See the profile</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Stretched Link* -->
+<!-- Add the ".stretched-link" class to a link inside the card, and it will make the whole card clickable and hoverable (the card will act as a link) -->
+<div class="container">
+    <h1>Card Image Stretched Link (Kartın Tamamı Tıklanabilir Alandır)</h1>
+
+    <div class="card" style="width: 250px;">
+        <img class="card-img-bottom" src="alex.jpg" alt="Alex">
+        <div class="card-body">
+            <h3 class="card-title">Alex de Souza</h3>
+            <p class="card-text">Adamın dibi olan bir Fenerbahçe efsanesidir</p>
+            <a href="#" class="btn btn-primary stretched-link">See the profile</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Card Image Overlays* -->
+<!-- Use ".card-img-overlay" class to add text on top of the image -->
+<!-- Arka planda resim olup üstünde yazılar olur -->
+<!-- NOT: "card-body" class'ının yerine kullanılır !!! -->
+<div class="container">
+    <h1>Card Image Overlay</h1>
+
+    <div class="card" style="width: 250px;">
+        <img class="card-img-bottom" src="alex.jpg" alt="Alex">
+        <div class="card-img-overlay">
+            <h3 class="card-title text-white">Alex de Souza</h3>
+            <p class="card-text text-white">Adamın dibi olan bir Fenerbahçe efsanesidir</p>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Card Columns* -->
+<!-- The ".card-columns" class creates a masonry-like grid of cards (like pinterest) -->
+<!-- The layout will automatically adjust as you insert more cards -->
+<!-- NOTE: The cards are displayed vertically on small screens (less than 576px) -->
+<div class="container">
+    <h1>Card Columns</h1>
+
+    <div class="card-columns">
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <p class="card-text">First card</p>
+            </div>
+        </div>
+
+        <div class="card bg-secondary">
+            <div class="card-body text-center">
+                <p class="card-text">Second card</p>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text">Third card</p>
+            </div>
+        </div>
+
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">Forth card</p>
+            </div>
+        </div>
+
+        <div class="card bg-dark">
+            <div class="card-body text-center">
+                <p class="card-text">Fifth card</p>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Card Deck* -->
+<!-- The ".card-deck" class creates a grid of cards that are of equal height and width -->
+<!-- The layout will automatically adjust as you insert more cards -->
+<!-- NOTE: The cards are displayed vertically on small screens (less than 576px) -->
+<div class="container">
+    <h1>Card Deck</h1>
+
+    <div class="card-deck">
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <p class="card-text">First card</p>
+                <p class="card-text">First card 1</p>
+                <p class="card-text">First card 2</p>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text">Second card</p>
+            </div>
+        </div>
+
+        <div class="card bg-danger">
+            <div class="card-body text-center">
+                <p class="card-text">Third card</p>
+            </div>
+        </div>
+
+        <div class="card bg-dark">
+            <div class="card-body text-center">
+                <p class="card-text">Forth card</p>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+<!-- 
+    NOT: 
+    First card'a 2 tane daha alt başlık ekledik ve uzunluğu arttı 
+    First card'ın uzunluğunun artmasıyla beraber "card-deck" class'ı sayesinde diğer sütunlar da eşit oranda büyüdü
+-->
+
+
+
+
+<!-- *Card Group* -->
+<!-- Use ".card-group" class -->
+<!-- NOT: "card-deck" class'ıyla çok benzerdir. Tek farkı "card.group" class'ında sütunlar arasında margin olmaz ve bitişik dururlar !!! -->
+<div class="container">
+    <h1>Card Group</h1>
+
+    <div class="card-group">
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <p class="card-text">First card</p>
+                <p class="card-text">First card 1</p>
+                <p class="card-text">First card 2</p>
+            </div>
+        </div>
+
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text">Second card</p>
+            </div>
+        </div>
+
+        <div class="card bg-danger">
+            <div class="card-body text-center">
+                <p class="card-text">Third card</p>
+            </div>
+        </div>
+
+        <div class="card bg-dark">
+            <div class="card-body text-center">
+                <p class="card-text">Forth card</p>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 DROPDOWNS __________ -->
+<!-- NOT: CDN kütüphanelerini eklemeyince dropdown penceresi açılmıyor. Sebebini bulamadım -->
+
+<!-- *Basic Dropdown* -->
+<!-- A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list -->
+<!-- The ".dropdown class" indicates a dropdown menu -->
+<!-- To open the dropdown menu, use a button or a link with a class of ".dropdown-toggle" and data-toggle="dropdown" -->
+<!-- Add the ".dropdown-menu" class to a <div> element to actually build the dropdown menu -->
+<!--  Then add the ".dropdown-item" class to each element (links or buttons) inside the dropdown menu -->
+<div class="container">
+    <h1>Dropdown</h1>
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Dropdown Divider* -->
+<!-- The ".dropdown-divider" class is used to separate links inside the dropdown menu with a thin horizontal border -->
+<div class="container">
+    <h1>Dropdown Divider</h1>
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+            <div class="dropdown-divider"></div>                 <!-- Linklerden sonra bir çizgi çeker -->
+            <a href="#" class="dropdown-item">Another Link</a>   <!-- Çizginin altına da bu gelir -->
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Dropdown Header* -->
+<!-- The ".dropdown-header" class is used to add headers inside the dropdown menu -->
+<!-- Header oluşturur ve o alanlara tıklanamaz -->
+<div class="container">
+    <h1>Dropdown Header</h1>
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <h5 class="dropdown-header">Dropdown Header</h5>
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+            <h5 class="dropdown-header">Dropdown Header</h5>
+            <a href="#" class="dropdown-item">Another Link</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Disabled and Active items* -->
+<!-- Highlight a specific dropdown item with the .active class (adds a blue background color) -->
+<!-- To disable an item in the dropdown menu, use the .disabled class (gets a light-grey text color and a "no-parking-sign" icon on hover) -->
+<div class="container">
+    <h1>Dropdown Disabled / Aktive</h1>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Default</a>
+            <a href="#" class="dropdown-item active">Active</a>
+            <a href="#" class="dropdown-item disabled">Disabled</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Dropdown Position* -->
+<!-- Dropdown elemanlarının sağa doğru açılması için ".dropright" class'ı kullanılır -->
+<!-- Dropdown elemanlarının sola doğru açılması için ".dropleft" class'ı kullanılır -->
+<!-- NOT: Dropdown menüsünün köşesinde beliren ok işareti otomatik olur -->
+<div class="container">
+    <h1>Dropdown Position</h1>
+
+    <div class="dropright">
+        <button class="btn btn-primary data-toggle" data-toggle="dropdown">Dropright Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+        </div>
+    </div><br>
+
+    <div class="dropleft">
+        <button class="btn btn-primary data-toggle" data-toggle="dropdown">Dropleft Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a> 
+            <a href="#" class="dropdown-item">Link 3</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Dropup* -->
+<!-- If you want the dropdown menu to expand upwards instead of downwards, change the <div> element with class="dropdown" to "dropup" -->
+<div class="container">
+    <h1>Dropup</h1>
+    
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Dropdown Text* -->
+<!-- The ".dropdown-item-text" class is used to add plain text to a dropdown item, or used on links for default link styling -->
+<div class="container">
+    <h1>Dropdown Text</h1>
+    
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown Button</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Link 1</a>
+            <a href="#" class="dropdown-item">Link 2</a>
+            <a href="#" class="dropdown-item">Link 3</a>
+            <a href="#" class="dropdown-item-text">Example Text Link</a>
+            <span class="dropdown-item-text">Example Text</span>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Grouped Buttons with a Dropdown* -->
+<!-- ".btn-group" class'ı sayesinde dropdown elemanları yanyana sıralı olacak -->
+<!-- Sony elemanı da yine ".btn-group" class'ının kullanılmasıyla ayrı bir grup oluşturacak -->
+<div class="container">
+    <h1>Nesting Button Groups</h1>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Tablet</a>
+                <a href="#" class="dropdown-item">Smartphone</a>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Split Button Dropdowns* -->
+<div class="container">
+    <h1>Split Button Dropdowns</h1>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+            </div>
+        </button>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+            </div>
+        </button>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+            </div>
+        </button>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Button Group With Dropdown* -->
+<!-- <div> tag'ine ".btn-group-vertical" class'ı eklenir -->
+<div class="container">
+    <h1>Vertical Button Group</h1>
+    
+    <div class="btn-group-vertical">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Tablet</a>
+                <a href="#" class="dropdown-item">Smartphone</a>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 COLLAPSE __________ -->
+
+<!-- *Basic Collapsible-->
+<!-- Collapsibles are useful when you want to hide and show large amount of content -->
+<!-- The ".collapse" class indicates a collapsible element -->
+<!-- To control (show/hide) the collapsible content, add the data-toggle="collapse" attribute to an <a> or a <button> element -->
+<!-- Then add the data-target="#id" attribute to connect the button with the collapsible content (<div id="demo">) -->
+<!-- NOTE: Note: For <a> elements, you can use the "href" attribute instead of the "data-target" attribute -->
+
+
+<!-- Butonda kullanımı: -->
+<div class="container">
+    <h1>Collapse Button</h1>
+
+    <button data-target="#demo1" data-toggle="collapse">Butona tıkla ve metni gör</button>
+    <div id="demo1" class="collapse">
+        <pre>
+            sdadadsadsaddas
+            asdasdsadsadasadasd
+            asdasdsad
+            asdsadsadsadsadads
+        </pre>
+    </div>
+</div><br><br>
+
+
+<!-- Linkte kullanımı: -->
+<div class="container">
+    <h1>Collapse Link</h1>
+
+    <a href="#demo2" data-toggle="collapse">Linke tıkla ve metni gör</a>
+    <div id="demo2" class="collapse">
+        <pre>
+            sdadadsadsaddas
+            asdasdsadsadasadasd
+            asdasdsad
+            asdsadsadsadsadads
+        </pre>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 NAVS __________ -->
+
+<!-- *Nav Menus* -->
+<!-- If you want to create a simple horizontal menu, add the ".nav" class to a <ul> element -->
+<!-- Then add ".nav-item" for each <li> and add the ".nav-link" class to their links -->
+<div class="container">
+    <h1>Nav Menu</h1>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 3</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Nav* -->
+<!-- Add the ".flex-column" class to create a vertical nav -->
+<div class="container">
+    <h1>Vertical Nav</h1>
+
+    <ul class="flex-column">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 3</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *ALigned Nav* -->
+<!-- Add the ".justify-content-center" class to center the nav -->
+<!-- Add the ".justify-content-end" class to right-align the nav -->
+<div class="container">
+    <h1>Aligned Nav</h1>
+
+    <!-- Center aligned: -->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 2</a>
+        </li>
+    </ul>
+
+    <!-- Right aligned: -->
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Link 2</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Navigation Tabs* -->
+<!-- Turn the nav menu into navigation tabs with the ".nav-tabs" class -->
+<!-- <a> tag'inin class'ına "active" eklersek o kısma basılı şekilde gözükür -->
+<!-- <a> tag'inin class'ına "disabled" eklersek o kısım tıklanamaz bir alan olur -->
+<div class="container">
+    <h1>Navigation Tab</h1>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Normal</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Pills* -->
+<!-- Turn the nav menu into navigation pills with the ".nav-pills" class -->
+<div class="container">
+    <h1>Pills</h1>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Normal</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Justified Tabs / Pills* -->
+<!-- Justify the tabs/pills with the .nav-justified class -->
+<!-- Eşit uzunlukta olmaları için kullanılır -->
+<div class="container">
+    <h1>Justified Tabs / Pills</h1>
+
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Normal</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Normal</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Pills with Dropdown* -->
+<div class="container">
+    <h1>Pills with Dropdown</h1>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Normal Dropdown</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+                <a href="#" class="dropdown-item">Link 3</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link active dropdown-toggle" data-toggle="dropdown">Active Dropdown</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+                <a href="#" class="dropdown-item">Link 3</a>
+            </div>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Tabs with Dropdown* -->
+<div class="container">
+    <h1>Tabs with Dropdown</h1>
+    
+    <ul class="nav nav-tabs">
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Normal Dropdown</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link active dropdown-toggle">Active Link</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+            </div>
+        </li>
+    </ul>
+</div><br><br>
+
+
+
+
+<!-- *Toggleable / Dynamic Tabs* -->
+<!-- Tablar arası dinamik geçiş yapılır -->
+<!-- To make the tabs toggleable, add the data-toggle="tab" attribute to each link -->
+<!-- Then add a ".tab-pane" class with a unique ID for every tab and wrap them inside a <div> element with class ".tab-content" -->
+<!-- If you want the tabs to fade in and out when clicking on them, add the ".fade" class to ".tab-pane" -->
+<div class="container">
+    <h1>Toggleable / Dynamic Tabs</h1>
+
+    <!-- Nav tabs: -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active" data-toggle="tab">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#menu1" class="nav-link" data-toggle="tab">Menu 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#menu2" class="nav-link" data-toggle="tab">Menu 2</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes: -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home">Burası home kısmı</div>
+        <div class="tab-pane container fade" id="menu1">Menü 1'e tıkladınız</div>
+        <div class="tab-pane container fade" id="menu2">Menü 2'ye tıkladınız</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Toggleable / Dynamic Pills* -->
+<!-- The same code applies to pills; only change the data-toggle attribute to data-toggle="pill" -->
+<div class="container">
+    <h1>Toggleable / Dynamic Pills</h1>
+
+    <!-- Nav tabs: -->
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="#Home" class="nav-link active" data-toggle="pill">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#Menu1" class="nav-link" data-toggle="pill">Menu 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#Menu2" class="nav-link" data-toggle="pill">Menu 2</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes: -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="Home">Burası home kısmı</div>
+        <div class="tab-pane container fade" id="Menu1">Menü 1'e tıkladınız</div>
+        <div class="tab-pane container fade" id="Menu2">Menü 2'ye tıkladınız</div>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 NAVBAR __________ -->
+<!-- A navigation bar is a navigation header that is placed at the top of the page -->
+
+<!-- *Basic Navbar* -->
+<!-- With Bootstrap, a navigation bar can extend or collapse, depending on the screen size -->
+<!-- A standard navigation bar is created with the ".navbar" class, followed by a responsive collapsing class: .navbar-expand-xl|lg|md|sm (stacks the navbar vertically on extra large, large, medium or small screens) -->
+<!-- To add links inside the navbar, use a <ul> element with class="navbar-nav" -->
+<!-- Then add <li> elements with a ".nav-item" class followed by an <a> element with a ".nav-link" class -->
+<div class="container">
+    <h1>Basic Navbar</h1>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens --> 
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Navbar* -->
+<!-- Remove the ".navbar-expand-xl|lg|md|sm" class to create a vertical navigation bar -->
+<div class="container">
+    <h1>Vertical Navbar</h1>
+
+    <nav class="navbar bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Centered Navbar* -->
+<!-- Add the ".justify-content-center" class to center the navigation bar -->
+<!-- NOTE: The following example will center the navigation bar on medium, large and extra large screens. On small screens it will be displayed vertically and left-aligned (because of the .navbar-expand-sm class) -->
+<div class="container">
+    <h1>Centered Navbar</h1>
+
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Colored Navbar* -->
+<!-- Use any of the ".bg-color" classes to change the background color of the navbar (.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light) -->
+<!-- NOTE: Add a white text color to all links in the navbar with the ".navbar-dark" class or use the ".navbar-light" class to add a black text color -->
+<div class="container">
+    <h1>Colorful Navbars</h1>
+
+    <!-- Grey with black text: -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Active Link</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Normal Link</a>
+            </li>
+            <li class="nav-item disabled">
+                <a href="#" class="nav-link disabled">Disabled Link</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Black with white text -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="#" class="nav-link active">Active Link</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Normal Link</a>
+            </li>
+            <li class="nav-item disabled">
+                <a href="#" class="nav-link disabled">Disabled Link</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Blue with white text -->
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="#" class="nav-link active">Active Link</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Normal Link</a>
+            </li>
+            <li class="nav-item disabled">
+                <a href="#" class="nav-link disabled">Disabled Link</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Brand / Logo* -->
+<!-- *The .navbar-brand class is used to highlight the brand/logo/project name of your page* -->
+<!-- When using the ".navbar-brand" class on images, Bootstrap 4 will automatically style the image to fit the navbar vertically -->
+<div class="container">
+    <h1>Brand / Logo</h1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        
+        <!-- Brand / Logo: -->
+        <a href="#" class="navbar-brand">
+            <img src="eksilogo.png" alt="logo" style="width: 60px;">
+        </a>
+
+        <!-- Links: -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Collapsing The Navigation Bar* -->
+<!-- Sitelerde genel olarak karşımıza çıkan 3 çizgiye basınca navigasyon barlarının gözükme işlemi -->
+<!-- Very often, especially on small screens, you want to hide the navigation links and replace them with a button that should reveal them when clicked on -->
+<!-- To create a collapsible navigation bar, use a button with class="navbar-toggler", data-toggle="collapse" and data-target="#thetarget" -->
+<!-- Then wrap the navbar content (links, etc) inside a div element with class="collapse navbar-collapse", followed by an id that matches the data-target of the button: "thetarget" -->
+<div class="container">
+    <h1>Collapsing The Navigation Bar</h1>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+        <!-- Brand -->
+        <a href="#" class="navbar-brand">
+            <img src="eksilogo.png" alt="logo" style="width: 50px;">
+            3 çizgiye tıkla aslan parçası
+        </a>
+
+        <!-- Toggler / Collapsibe Button-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links: -->
+        <div class="collapse navbar-collapse" id="demo3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div><br><br>
+
+
+<!-- NOTE: You can also remove the ".navbar-expand-md" class to ALWAYS hide navbar links and display the toggler button -->
+
+
+
+<!-- *Navbar With Dropdown* -->
+<div class="container">
+    <h1>Navbar With Dropdown</h1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+        <!-- Logo: -->
+        <a href="#" class="navbar-brand">
+            <img src="eksilogo.png" alt="eksi" style="width: 50px;">
+        </a>
+
+        <!-- Links: -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+
+            <!-- Dropdown: -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="demo6">Dropdown Link</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Link 3-a</a>
+                    <a href="#" class="dropdown-item">Link 3-b</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Navbar Forms and Buttons* -->
+<!-- Add a <form> element with class="form-inline" to group inputs and buttons side-by-side -->
+<div class="container">
+    <h1>Navbar Forms and Buttons</h1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <form action="/action_page.php" class="form-inline">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-success">Search</button>
+        </form>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Navbar Text* -->
+<!-- Use the .navbar-text class to vertical align any elements inside the navbar that are not links (ensures proper padding and text color) -->
+<div class="container">
+    <h1>Navbar Text</h1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+
+        <!-- Navbar text: -->
+        <span class="navbar-text">
+            Navbar text
+        </span>
+    </nav>
+</div><br><br>
+
+
+
+
+<!-- *Fixed Navigation Bar* -->
+<!-- The navigation bar can also be fixed at the top or at the bottom of the page -->
+<!-- A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll -->
+<!-- The ".fixed-top" class makes the navigation bar fixed at the top -->
+<!-- The ".fixed-bottom" class makes the navigation bar fixed at the bottom -->
+<div class="container">
+    <h1>Fixed Navigation Bar</h1>
+    <p>".fixed-top" class'ı sayesinde en üstte navigasyon barı var</p>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-up">   <!-- Fixed Top -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 FORMS __________ -->
+
+<!-- *Bootstrap 4's Default Settings* -->
+<!-- 
+    Form controls automatically receive some global styling with Bootstrap:
+    All textual <input>, <textarea>, and <select> elements with class ".form-control" have a width of 100%
+-->
+
+
+<!-- *Bootstrap 4 Form Layouts* -->
+<!-- 
+    Bootstrap provides two types of form layouts:
+    1)Stacked (full-width) form
+    2)Inline form
+-->
+
+
+<!-- 1)Bootstrap 4 Stacked Form -->
+<!-- The following example creates a stacked form with two input fields, one checkbox, and a submit button -->
+<!-- Add a wrapper element with ".form-group" around each form control, to ensure proper margins -->
+<div class="container">
+    <h1>Stacked Form</h1>
+
+    <form action="/action_page.php">
+        <!-- Input Field 1: -->
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+
+        <!-- Input Field 2: -->
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+
+        <!-- Checkbox: -->
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox">
+                Remember me
+            </label>
+        </div>
+
+        <!-- Submit: -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div><br><br>
+
+
+
+
+<!-- *Bootstrap Inline Form* -->
+<!-- In an inline form, all of the elements are inline and left-aligned -->
+<!-- Only difference: Add class ".form-inline" to the <form> element -->
+<div class="container">
+    <h1>Inline Form</h1>
+    
+    <form action="/action_page.php" class="form-inline">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+    
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox">
+                Remember me
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div><br><br>  
+
+
+
+
+<!-- *Inline Form with Utilities* -->
+<!-- Yukarıdaki gibi Inline Form biçiminde oluşturunca formumuz bitişik/sıkışık durur -->
+<!-- Bunun önüne geçip daha iyi bir görüntü elde etmek için "Bootstrap's spacing utilities" kullanılabilir -->
+<!-- The following example adds a right margin (.mr-sm-2) to each input on all devices (small and up) -->
+<!-- And a margin bottom class (.mb-2) is used to style the input field when it breaks (goes from horizontal to vertical due to not enough space/width) -->
+<div class="container">
+    <h1>Inline Form with Utilities</h1>
+    
+    <form action="/action_page.php" class="form-inline">
+        <div class="form-group">
+            <label for="email" class="mr-sm-2">Email address:</label>
+            <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="pwd" class="mr-sm-2">Password:</label>
+            <input type="password" class="form-control mb-2 mr-sm-2" placeholder="Enter password" id="pwd">
+        </div>
+    
+        <div class="form-check mb-2 mr-sm-2">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox">
+                Remember me
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div><br><br> 
+
+
+
+
+<!-- *Form Row / Grid* -->
+<!-- You can also use columns ".col" to control the width and alignment of form inputs without using spacing utilities -->
+<!-- Just remember to put them inside a ".row" container -->
+<div class="container">
+    <h1>Form Row / Grid</h1>
+
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+
+            <div class="col">
+                <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+        </div>
+    </form>
+</div><br><br>
+
+
+
+
+<!-- *Form Validation* -->
+<!-- You can use different validation classes to provide valuable feedback to users -->
+<!-- Add either ".was-validated" or ".needs-validation" to the <form> element, depending on whether you want to provide validation feedback before or after submitting the form -->
+<!-- The input fields will have a green (valid) or red (invalid) border to indicate what's missing in the form -->
+<!-- You can also add a .valid-feedback or .invalid-feedback message to tell the user explicitly what's missing, or needs to be done before submitting the form -->
+
+
+<!-- In this example, we use ".was-validated" to indicate what's missing before submitting the form: -->
+<div class="container">
+    <h1>Form Validation ".was-validated"</h1>
+    <p>İlgili alanlar doldurulmadan önce doldurulması gereken yerlerin uyarısı verilir</p>
+
+    <form action="/action_poage.php" class="was-validated">
+        <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Plase fill the blank</div>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Plase fill the blank</div>
+        </div>
+
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remember" required>
+                I agree falan filan inter milan
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Check this box to continue</div>
+            </label>
+        </div>
+    </form>
+</div><br><br>
+
+
+
+
+<!-- In this example, we use ".needs-validation" which will add the validation effect AFTER the form has been submitting (if there's anything missing) -->
+<!-- NOTE: You have to add some jQuery code for this example to work properly !!! -->
+<div class="container">
+    <h1>Form Validation "needs-validation"</h1>
+    <p>İlgili alanlar doldurulduktan sonra gerekli uyarıları yapar</p>
+
+    <form action="/action_page.php" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Check this checkbox to continue.</div>
+            </label>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+  
+<script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
+</script><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 INPUTS __________ -->
+<!-- 
+    NOT: Normalde <form action="/action_page.php"> deyip en alta da <button type="submit" class="btn btn-primary"></button> şeklinde bir submit
+    butonuyla gidilmek istenen yer belirlenir fakat bunları bu başlık altında yazmayacağız. Amaç input yapılarını öğrenmek
+-->
+
+<!-- *Bootstrap 4 Form Inputs* -->
+<!-- 
+    Bootstrap supports the following form controls:
+    1)Input
+    2)Textarea    
+    3)Checkbox
+    4)Radio
+    5)Select
+-->
+
+
+<!-- 1)Bootstrap Input -->
+<!-- Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color -->
+<!-- NOTE: Inputs will NOT be fully styled if their type is not properly declared !!! -->
+
+<!-- The following example contains two input elements; one of type="text" and one of type="password" -->
+<!-- As we mentioned in the Forms chapter, we use the ".form-control" class to style inputs with full-width and proper padding, etc -->
+<div class="container">
+    <h1>Bootstrap Input</h1>
+    
+    <div class="form-group">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" id="usr">    <!-- First Input (text)-->
+    </div>
+
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="text" class="form-control" id="pwd">    <!-- Second Input (password)-->
+    </div>
+</div><br><br>
+
+
+
+
+<!-- 2)Bootstrap Textarea -->
+<!-- The following example contains a textarea -->
+<div class="container">
+    <h1>Textarea</h1>
+
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- 3)Bootstrap Checkboxes -->
+<!-- Checkboxes are used if you want the user to select any number of options from a list of preset options -->
+<!-- Use a wrapper element with class="form-check" to ensure proper margins for labels and checkboxes -->
+<!-- Add the ".form-check-label" class to label elements, and ".form-check-input" to style checkboxes properly inside the ".form-check" container -->
+<!-- The following example contains three checkboxes. The last option is disabled -->
+<div class="container">
+    <h1>Checkboxes</h1>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" enabled>
+            Option 1
+        </label>
+    </div>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            Option 2
+        </label>
+    </div>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" disabled>
+            Disabled Option
+        </label>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Inline Checkboxes* -->
+<!-- Use the ".form-check-inline" class if you want the checkboxes to appear on the same line -->
+<div class="container">
+    <h1>Inline Checkboxes</h1>
+
+    <div class="form-check-inline">       <!-- Tek fark-->
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" enabled>
+            Option 1
+        </label>
+    </div>
+
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            Option 2
+        </label>
+    </div>
+
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="" disabled>
+            Disabled Option
+        </label>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- 4)Bootstrap Radio Buttons -->
+<!-- Checkbox'dan farklı olarak yalnızca bir seçim yapılabilir -->
+<!-- The following example contains three radio buttons. The last option is disabled -->
+<div class="container">
+    <h1>Radio Buttons</h1>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">
+            Option 1
+        </label>
+    </div>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">
+            Option 2
+        </label>
+    </div>
+
+    <div class="form-check disabled">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio" disabled>
+            Disabled Option
+        </label>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Inline Radio Buttons*  -->
+<!-- Just like checkboxes, use the .form-check-inline class if you want the radio buttons to appear on the same line: -->
+<div class="container">
+    <h1>Inline Radio Buttons</h1>
+
+    <div class="form-check-inline">        <!-- Tek fark -->
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">
+            Option 1
+        </label>
+    </div>
+
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">
+            Option 2
+        </label>
+    </div>
+
+    <div class="form-check disabled-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio" disabled>
+            Disabled Option
+        </label>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- 5)Bootstrap Select List -->
+<!-- Select lists are used if you want to allow the user to pick from multiple options -->
+<!-- The following example contains a dropdown list (select list) -->
+<div class="container">
+    <h1>Select List</h1>
+
+    <div class="form-group">
+        <label for="sel1">Select list:</label>
+        <select class="form-control" id="sel1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Form Input Özellikleri* -->
+
+<!-- *Form Control Sizing* -->
+<!-- Change the size of the form control with ".form-control-sm" or ".form-control-lg" -->
+<input type="text" class="form-control form-control-sm">    <!-- Small -->
+<input type="text" class="form-control">                    <!-- Default -->
+<input type="text" class="form-control form-control-lg">    <!-- Large -->
+
+
+
+
+<!-- *Form Control File and Range* -->
+<!-- Add the ".form-control-range" class to input type"range" or ".form-control-file" to input type"file" to style a range control or a file field with full-width -->
+<div class="container">
+    <h1>Form Control File and Range</h1>
+
+    <form action="/action_page.php">
+        <div class="form-group">
+            <input type="range" class="form-control-range" name="range">
+        </div>
+
+        <div class="form-group">
+            <input type="file" class="form-control-file border" name="file">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 INPUT GROUPS __________ -->
+<!-- The ".input-group" class is a container to enhance an input by adding an icon, text or a button in front or behind the input field as a "help text"-->
+<!-- Use ".input-group-prepend" to add the help text in front of the input, and ".input-group-append" to add it behind the input -->
+<!-- At last, add the ".input-group-text" class to style the specified help text -->
+<div class="container">
+    <h1>Input Groups</h1>
+
+    <form>
+        <!-- Yardımcı text önce geliyor (prepend) -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">    
+                <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <!-- Yardımcı text sonra geliyor (append)-->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your email">
+            <div class="input-group-append">     
+                <span class="input-group-text">@example.com</span>
+            </div>
+        </div>
+    </form>
+</div><br><br>
+
+
+<!-- 
+    NOTE: 
+    We used the .mb-3 utility class to ensure that the input group gets a proper margin bottom 
+    "Username" ile "Your email" arasında 3 marginlik boşluk oluşmuş oldu
+    İleride "BS4 Utilies" kısmı olacak
+-->
+
+
+
+
+<!-- *Input Group Sizing* -->
+<!-- Use the ".input-group-sm" class for small input groups and ".input-group-lg" for large inputs groups -->
+<div class="container">
+    <h1>Input Group Sizing</h1>
+
+    <form>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Small</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Default</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Big</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+    </form>
+</div><br><br>
+
+
+
+
+<!-- *Multiple Inputs and Helpers* -->
+<div class="container">
+    <h1>Multiple Inputs and Helpers</h1>
+
+    <!-- Multiple Inputs: -->
+    <form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Person</span>
+                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+        </div>
+    </form>
+
+    <!-- Multiple Help Text: -->
+    <form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">One</span>
+                <span class="input-group-text">Two</span>
+                <span class="input-group-text">Three</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Boş beleş boşluk">
+        </div>
+    </form>
+</div><br><br>
+
+
+
+
+<!-- *Input Group with Checkboxes and Radios* -->
+<div class="container">
+    <h1>Input Group with Checkboxes and Radios</h1>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox">
+            </div>
+            <input type="text" class="form-control" placeholder="Some text">
+        </div>
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="radio">
+            </div>
+            <input type="text" class="form-control" placeholder="Some text">
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Input Group Buttons* -->
+<div class="container">
+    <h1>Input Group Buttons</h1>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-primary">Basic Button</button>
+            <input type="text" class="form-control" placeholder="Some text">
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class=""></div>
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-success">Go</button>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Something clever">  
+        <div class="input-group-append">
+            <button class="btn btn-primary">OK</button>
+            <button class="btn btn-primary">Cancel</button>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Input Group with Dropdown Button* -->
+<!-- Add a dropdown button in the input group -->
+<!-- NOTE: You don't need the .dropdown wrapper, as you normally would !!! -->
+<div class="container">
+    <h1>Input Group with Dropdown Button</h1>
+
+    <div class="input-group mt-3 mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                Dropdown Button
+            </button>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Link 1</a>
+                <a href="#" class="dropdown-item">Link 2</a>
+                <a href="#" class="dropdown-item">Link 3</a>
+                <a href="#" class="dropdown-item">Link 4</a>
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 CUSTOM FORMS __________ -->
+<!-- BS4 sayesinde bazı elementleri varsayılan şekilde değil de özelleştirilmiş biçimlerde kullanabilirz -->
+<!-- Özelleştirilmiş kullanımların görüntüsü daha hoş gelebilir -->
+
+
+<!-- *Custom Checkbox* -->
+<!-- To create a custom checkbox, wrap a container element, like <div>, with a class of ".custom-control" and ".custom-checkbox" around the checkbox -->
+<!-- Then add the ".custom-control-input" to the input with type="checkbox" -->
+<!-- NOTE: If you use labels for accompanying text, add the ".custom-control-label" class to it. Note that the value of the for attribute should match the id of the checkbox -->
+<div class="container">
+    <h1>Custom Checkbox</h1>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+        <label for="customCheck" class="custom-control-label">Custom Checkbox</label>
+    </div>
+
+    <input type="checkbox" id="defaultCheck" name="example2">
+    <label for="defaultCheck">Default Checkbox</label>
+</div><br><br>
+
+
+
+
+<!-- *Custom Switch* -->
+<!-- To create a custom "toggle switch", wrap a container element, like <div>, with a class of ".custom-control" and ".custom-switch" around a checkbox -->
+<!-- Then add the ".custom-control-input" class to the checkbox -->
+<div class="container">
+    <h1>Custom Switch</h1>
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch">
+        <label for="customSwitch" class="custom-control-label">Toggle me</label>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Custom Radio Buttons* -->
+<!-- To create a custom radio button, wrap a container element, like <div>, with a class of ".custom-control" and ".custom-radio" around the radio button -->
+<!-- Then add the ".custom-control-input" to the input with type="radio" -->
+<div class="container">
+    <h1>Custom Radio Button</h1>
+
+    <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customRadio" name="example1">
+        <label for="customRadio" class="custom-control-label">Custom Radio</label>
+    </div>
+    
+    <input type="radio" id="defaultRadio" name="example2">
+    <label for="defaultRadio">Default Radio</label>
+</div><br><br>
+
+
+
+
+<!-- *Inline Custom Form Controls* -->
+<!-- If you want the custom form controls to sit side by side (inline), add the ".custom-control-inline" to the wrapper/container -->
+<div class="container">
+    <h1>Inline Custom Radio Button</h1>
+
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="customRadio2" name="example1">
+        <label for="customRadio2" class="custom-control-label">Custom Radio</label>
+    </div>
+    
+    <input type="radio" id="defaultRadio2" name="example2">
+    <label for="defaultRadio2">Default Radio</label>
+</div><br><br>
+
+
+
+
+<!-- *Custom Select Menu* -->
+<!-- To create a custom select menu, add the ".custom-select" class to the <select> element -->
+<div class="container">
+    <h1>Custom Select Menu</h1>
+    <select name="cars" class="custom-select">
+        <option selected>Custom Select Menu</option>
+        <option value="volvo">Volvo</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select><br><br>
+</div>
+
+
+
+
+<!-- *Custom Select Menu Size* -->
+<!-- Use the ".custom-select-sm" class to create a small select menu and the ".custom-select-lg" class for a large one -->
+<div class="container">
+    <h1>Custom Select Menu Size</h1>
+
+    <!-- Small: -->
+    <select name="cars" class="custom-select-sm">
+        <option selected>Custom Select Menu</option>
+        <option value="volvo">Volvo</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select><br><br>
+
+    <!-- Large: -->
+    <select name="cars" class="custom-select-lg">
+        <option selected>Custom Select Menu</option>
+        <option value="volvo">Volvo</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select><br><br>
+</div><br><br>
+
+
+
+
+<!-- *Custom Range* -->
+<!-- To create a custom range menu, add the ".custom-range" class to the input element with type="range": -->
+<div class="container">
+    <h1>Custom Range</h1>
+
+    <label for="customRange">Custom Range</label>
+    <input type="range" class="custom-range" id="customRange" name="points1">
+
+    <label for="defaultRange">Default Range</label>
+    <input type="range" id="defaultRange" name="points2">
+</div><br><br>
+
+
+
+
+<!-- *Custom File Upload* -->
+<!-- To create a custom file upload, wrap a container element with a class of ".custom-file" around the input with type="file" -->
+<!-- Then add the ".custom-file-input" to it -->
+<!-- NOTE: If you use labels for accompanying text, add the ".custom-file-label" class to it. Note that the value of the for attribute should match the id of the checkbox !!!-->
+<!-- NOTE: You also have to include some jQuery code if you want the name of the file to appear when you select a specific file !!! -->
+<div class="container">
+    <h1>Custom File Upload</h1>
+
+    <p>Custom File:</p>
+    <div class="custom-file mb-3">
+        <input type="file" class="custom-file-input" name="filename" id="customFile" >
+        <label for="customFile" class="custom-file-label">Choose file</label>
+    </div>
+
+    <p>Default File:</p>
+    <input type="file" name="filename2" id="defaultFile">
+
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 CAROUSEL __________ -->
+<!-- The Carousel is a slideshow for cycling through elements -->
+
+
+<!-- How To Create a Carousel? -->
+<!-- 
+    CLASS	                        DESCRIPTION
+    .carousel	                    Creates a carousel
+    .carousel-indicators	        Adds indicators for the carousel. These are the little dots at the bottom of each slide (which indicates how many slides there are in the carousel, and which slide the user are currently viewing)
+    .carousel-inner	                Adds slides to the carousel
+    .carousel-item	                Specifies the content of each slide
+    .carousel-control-prev	        Adds a left (previous) button to the carousel, which allows the user to go back between the slides
+    .carousel-control-next	        Adds a right (next) button to the carousel, which allows the user to go forward between the slides
+    .carousel-control-prev-icon	    Used together with .carousel-control-prev to create a "previous" button
+    .carousel-control-next-icon	    Used together with .carousel-control-next to create a "next" button
+    .slide	                        Adds a CSS transition and animation effect when sliding from one item to the next. Remove this class if you do not want this effect
+-->
+
+
+<div class="container">
+    <h1>Carousel</h1>
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators (Göstergeler): -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The Slideshow: -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="fb.jpg" alt="fb">
+                <div class="carousel-caption">
+                    <h3>Fenerbahçe</h3>
+                    <p style="color: yellow;">1907'de kurulmuştur</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="alex.jpg" alt="alex">
+                <div class="carousel-caption">
+                    <h3>Alex de Souza</h3>
+                    <p style="color: yellow">Fenerbahçenin efsanevi futbolcusu</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="eksilogo.png" alt="eksi">
+            </div>
+        </div>
+
+        <!-- Left and Right Controls: -->
+        <a href="#demo" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon-"></span>
+        </a>
+        <a href="#demo" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 TOOLTIP __________ -->
+<!-- The Tooltip component is small pop-up box that appears when the user moves the mouse pointer over an element -->
+
+
+<!-- How To Create a Tooltip? -->
+<!-- To create a tooltip, add the data-toggle="tooltip" attribute to an element -->
+<!-- Use the "title" attribute to specify the text that should be displayed inside the tooltip -->
+<!-- NOTE: Tooltips must be initialized with jQuery: select the specified element and call the tooltip() method !!! -->
+<!-- The following code will enable all tooltips in the document -->
+<div class="container">
+    <h1>Tooltip</h1>
+
+    <a href="#" data-toggle="tooltip" title="Üstüme geldin">Üstüme gel</a>
+</div>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script><br><br>
+
+
+
+
+<!-- *Positioning Tooltips* -->
+<!-- By default, the tooltip will appear on top of the element -->
+<!-- Use the "data-placement" attribute to set the position of the tooltip on top, bottom, left or the right side of the element -->
+<div class="container">
+    <h1>Positioning Tooltips</h1>
+    <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
+    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a>
+    <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a>
+    <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a>
+</div>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script><br><br>
+
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 POPOVER __________ -->
+<!-- Tooltip'e benzerdir. Tooltip'ten farklı olarak üstüne tıklamanız gerekir. Ayrıca tooltip'e oranla çok daha fazla içerik eklenebilir -->
+
+
+<!-- How To Create a Popover? -->
+<!-- To create a popover, add the data-toggle="popover" attribute to an element -->
+<!-- Use the "title" attribute to specify the header text of the popover, and use the "data-content" attribute to specify the text that should be displayed inside the popover's body -->
+<!-- NOTE: Popovers must be initialized with jQuery: select the specified element and call the popover() method 1!! -->
+<div class="container">
+    <h1>Popover</h1>
+
+    <a href="#" data-toggle="popover" title="Popover Header" data-content="Some bla bla in the popover">Toggle popover</a>
+</div>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+</script><br><br>
+
+
+
+
+<!-- *Positioning Popovers* -->
+<!-- By default, the popover will appear on the right side of the element -->
+<!-- Use the "data-placement" attribute to set the position of the popover on top, bottom, left or the right side of the element -->
+<div class="container">
+    <h1>Popover</h1>
+
+    <a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Click</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Click</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Click</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Click</a>
+</div>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+</script><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 TOAST __________ -->
+<!-- The toast component is like an alert box that is only shown for a couple of seconds when something happens -->
+
+
+<!-- How To Create a Toast? -->
+<!-- To create a toast, use the ".toast" class, add a ".toast-header" and a ".toast-body" inside of it -->
+<!-- NOTE: Toasts must be initialized with jQuery: select the specified element and call the toast() method !!! -->
+<div class="container">
+    <h1>Toast</h1>
+
+    <button class="btn btn-primary" id="myBtn">Show Toast</button>
+
+    <div class="toast">
+        <div class="toast-header">
+            Toast Header
+        </div>
+        <div class="toast-body">
+            Some text in toast body
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $('.toast').toast('show');
+        });
+    });
+</script><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 UTILITIES __________ -->
+<!-- Bootstrap 4 has a lot of utility/helper classes to quickly style elements without using any CSS code -->
+
+
+<!-- *Borders* -->
+<!-- Use the "border" classes to add or remove borders from an element -->
+<style>
+    .border {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        margin: 6px;
+    }
+</style>
+<div class="container">
+    <h1>Borders</h1>
+
+    <span class="border"></span>
+    <span class="border border-0"></span>
+    <span class="border border-top-0"></span>
+    <span class="border border-right-0"></span>
+    <span class="border border-bottom-0"></span>
+    <span class="border border-left-0"></span>
+</div><br><br>
+
+
+
+
+<!-- *Border Color* -->
+<!-- Add a color to the border with any of the contextual border color classes -->
+<style>
+    .border {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        margin: 6px;
+    }
+</style>
+<div class="container">
+    <h1>Border Color</h1>
+
+    <span class="border border-primary"></span>
+    <span class="border border-secondary"></span>
+    <span class="border border-success"></span>
+    <span class="border border-danger"></span>
+    <span class="border border-warning"></span>
+    <span class="border border-info"></span>
+    <span class="border border-light"></span>
+    <span class="border border-dark"></span>
+    <span class="border border-white"></span>
+</div><br><br>
+
+
+
+
+<!-- *Border Radius* -->
+<!-- Add rounded corners to an element with the "rounded" classes -->
+<!-- Yorum satırına aldım çünkü yukarıdaki span'leri de etkiliyordu !!!
+<style>
+    span {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        margin: 6px;
+        background-color: #555;
+    }
+</style>
+-->
+<div class="container">
+    <h1>Border Radius</h1>
+
+    <span class="rounded-sm"></span>
+    <span class="rounded"></span>
+    <span class="rounded-lg"></span>
+    <span class="rounded-top"></span>
+    <span class="rounded-right"></span>
+    <span class="rounded-bottom"></span>
+    <span class="rounded-left"></span>
+    <span class="rounded-circle"></span>
+    <span class="rounded-0"></span>
+</div><br><br>
+
+
+
+
+<!-- *Float and Clearfix* -->
+<!-- Float an element to the right with the ".float-right" class or to the left with ".float-left" and clear floats with the ".clearfix class" -->
+<div class="container">
+    <h1>Float and Clearfix</h1>
+
+    <div class="clearfix">
+        <span class="float-left">Float left</span>
+        <span class="float-right">Float right</span>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Responsive Floats* -->
+<!-- Float an element to the left or to the right depending on screen width, with the responsive float classes (.float-*-left|right - where * is sm (>=576px), md (>=768px), lg (>=992px) or xl (>=1200px)) -->
+<div class="container">
+    <h1>Responsive Floats</h1>
+    <strong>Ekranı büyültüp küçülterek farkı görebilirsin</strong><br>
+
+    <div class="float-sm-right">Float right on small screens or wider</div><br>
+    <div class="float-md-right">Float right on medium screens or wider</div><br>
+    <div class="float-lg-right">Float right on large screens or wider</div><br>
+    <div class="float-xl-right">Float right on extra large screens or wider</div><br>
+    <div class="float-none">Float none</div>
+</div><br><br>
+
+
+
+
+<!-- *Center Align* -->
+<!-- Center an element with the ".mx-auto" class (adds margin-left and margin-right: auto) -->
+<div class="container">
+    <h1>Center Align</h1>
+
+    <div class="mx-auto bg-primary" style="width: 150px;">Centered</div>
+</div><br><br>
+
+
+
+
+<!-- *Width* -->
+<!-- Set the width of an element with the w-* classes (.w-25, .w-50, .w-75, .w-100, .mw-100) -->
+<div class="container">
+    <h1>Width</h1>
+
+    <div class="w-25 bg-primary">Width %25</div>    
+    <div class="w-50 bg-secondary">Width %50</div>
+    <div class="w-75 bg-success">Width %75</div>
+    <div class="w-100 bg-danger">Width %100</div>
+    <div class="mv-100 bg-warning">Max Width 100%</div>
+</div><br><br>
+
+
+
+
+<!-- *Height* -->
+<!-- Set the height of an element with the h-* classes (.h-25, .h-50, .h-75, .h-100, .mh-100) -->
+<div class="container">
+    <h1>Height</h1>
+
+    <div style="height: 200px; background-color: #ddd">
+        <div class="h-25 bg-primary">Height 25%</div>
+        <div class="h-50 bg-warning">Height 50%</div>
+        <div class="h-75 bg-secondary">Height 75%</div>
+        <div class="h-100 bg-danger">Height 100%</div>
+        <div class="mh-100 bg-success" style="height:500px">Max Height 100%</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Spacing* -->
+<!-- Bootstrap 4 has a wide range of responsive margin and padding utility classes -->
+<!--  They work for all breakpoints: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px) or xl (>=1200px)) -->
+<!-- The classes are used in the format: {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, and xl -->
+<!-- 
+    Where property is one of:
+    m - sets margin
+    p - sets padding
+-->
+<!-- 
+    Where sides is one of:
+    t      - sets margin-top or padding-top
+    b      - sets margin-bottom or padding-bottom
+    l      - sets margin-left or padding-left
+    r      - sets margin-right or padding-right
+    x      - sets margin-left and margin-right or both padding-left and padding-right
+    y      - sets margin-top and margin-bottom or both padding-top and padding-bottom 
+    blank  - sets a margin or padding on all 4 sides of the element
+-->
+<!-- 
+    Where size is one of:
+    0     - sets margin or padding to 0
+    1     - sets margin or padding to .25rem (4px if font-size is 16px)
+    2     - sets margin or padding to .5rem (8px if font-size is 16px)
+    3     - sets margin or padding to 1rem (16px if font-size is 16px)
+    4     - sets margin or padding to 1.5rem (24px if font-size is 16px)
+    5     - sets margin or padding to 3rem (48px if font-size is 16px)
+    auto  - sets margin to auto
+-->
+<div class="container">
+    <h1>Spacing</h1>
+
+    <div class="pt-4 bg watning">Only a top padding (1.5rem = 24px</div>
+    <div class="p-5 bg-success">Padding on all sides (3rem = 48px</div>
+    <div class="m-5 pb-5 bg-info">Margin on all sides (3rem = 49px) and bottom padding (3rem = 48px)</div>
+</div><br><br>
+
+
+
+
+<!-- *Shadows* -->
+<!-- Use the "shadow-" classes to add shadows to an element -->
+<div class="container">
+    <h1>Shadow</h1>
+
+    <div class="shadow-none p-4 mb-4 bg-light">No shadow</div>
+    <div class="shadow-sm p-4 mb-4 bg-white">Small shadow</div>
+    <div class="shadow p-4 mb-4 bg-white">Default shadow</div>
+    <div class="shadow-lg p-4 mb-4 bg-white">Large shadow</div>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Align* -->
+<!-- Use the "align-" classes to change the alignment of elements (only works on inline, inline-block, inline-table and table cell elements) -->
+<div class="container">
+    <h1>Vertical Align</h1>
+
+    <span class="align-baseline">baseline</span>
+    <span class="align-top">top</span>
+    <span class="align-middle">middle</span>
+    <span class="align-bottom">bottom</span>
+    <span class="align-text-top">text-top</span>
+    <span class="align-text-bottom">text-bottom</span>
+</div><br><br>
+
+
+
+
+<!-- *Responsive Embeds* -->
+<!-- Create responsive video or slideshow embeds based on the width of the parent -->
+<!-- Add the ".embed-responsive-item" to any embed elements (like <iframe> or <video>) in a parent element with ".embed-responsive" and an aspect ratio of your choice -->
+<div class="container">
+    <h1>Responsive Embeds</h1>
+
+
+    <!-- 21:9 aspect ratio -->
+    <h3>21:9</h3>
+    <div class="embed-responsive embed-responsive-21by9">
+        <iframe class="embed-responsive-item" src="love.mp3"></iframe>
+    </div>
+
+    <!-- 16:9 aspect ratio -->
+    <h3>16:9</h3>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="love.mp3"></iframe>
+    </div>
+
+    <!-- 4:3 aspect ratio -->
+    <h3>4:3</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="love.mp3"></iframe>
+    </div>
+
+    <!-- 1:1 aspect ratio -->
+    <h3>1:1</h3>
+    <div class="embed-responsive embed-responsive-1by1">
+        <iframe class="embed-responsive-item" src=love.mp3></iframe>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Visibility* -->
+<!-- Use the ".visible" or ".invisible" classes to control the visibility of elements -->
+<!-- NOTE: These classes do not change the CSS display value. They only add visibility:visible or visibility:hidden !!! -->
+<div class="container">
+    <h1>Visibility</h1>
+
+    <div class="visible">I am visible (altında görünmez "invisible" yazı var</div>
+    <div class="invisible">I am invisible</div>
+</div><br><br>
+
+
+
+
+
+<!-- *Position* -->
+<!-- 
+    Use the ".fixed-top" class to make any element fixed/stay at the top of the page:
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        ...
+    </nav>
+-->
+
+
+<!-- 
+    Use the ".fixed-bottom" class to make any element fixed/stay at the bottom of the page:
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+        ...
+    </nav>
+-->
+
+
+<!-- 
+    Use the ".sticky-top" class to make any element fixed/stay at the top of the page when you scroll past it: 
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        ...
+    </nav>
+-->
+
+
+
+
+<!-- *Close Icon* -->
+<!-- Use the ".close" class to style a close icon -->
+<!-- This is often used for alerts and modals -->
+<!-- NOTE: We use the &times; symbol to create the actual icon (a better looking "x"). Also note that it floats right by default -->
+<div class="container">
+    <h1>Close Icon</h1>
+    <p>Sağda çarpı işareti şeklinde close icon duruyor</p>
+
+    <button type="button" class="close">&times;</button>
+</div><br><br>
+
+
+
+
+<!-- *Screenreaders* -->
+<!-- Use the ".sr-only" class to hide an element on all devices, except screen readers -->
+<div class="container">
+    <h1>Screenreaders</h1>
+    <p>sr-only class'ıyla yazdığımız text gözükmez</p>
+
+    <span class="sr-only">I will be hidden on all screens except for screen readers.</span>    
+</div><br><br>
+
+
+
+
+<!-- *Colors* -->
+<!-- 
+    The classes for text colors are:
+    .text-muted
+    .text-primary
+    .text-success
+    .text-info
+    .text-warning
+    .text-danger
+    .text-secondary
+    .text-white
+    .text-dark
+    .text-body (default body color/often black)
+    .text-light:    
+-->
+<div class="container">
+    <h1>Colors</h1>
+
+    <p class="text-muted">Muted text</p>
+    <p class="text-primary">Primary text</p>
+    <p class="text-secondary">Secondary text</p>
+    <p class="text-warning">Warning text</p>
+</div><br><br>
+
+
+
+
+<!-- Contextual text classes can also be used on links, which will add a darker hover color: -->
+<div class="container">
+    <h1>Link Colors</h1>
+    
+    <a href="#" class="text-success">Success link</a>
+    <a href="#" class="text-warning">Warning link</a>
+    <a href="#" class="text-info">Info link</a>
+</div><br><br>
+
+
+
+
+<!-- You can also add 50% opacity for black or white text with the ".text-black-50" or ".text-white-50" classes -->
+<div class="container">
+    <h1>Opacity</h1>
+
+    <p class="text-black-50">Black text with 50% opacity on white background</p>
+    <p class="text-white-50 bg-dark">White text with 50% opacity on black background</p>
+</div><br><br>
+
+
+
+
+<!-- *Background Colors* -->
+<!-- 
+    The classes for background colors are: 
+    .bg-primary
+    .bg-success
+    .bg-info
+    .bg-warning
+    .bg-danger
+    .bg-secondary
+    .bg-dark
+    .bg-light
+-->
+<div class="container">
+    <h1>Background Colors</h1>
+
+    <p class="bg-primary">Primary Background</p>
+    <p class="bg-secondary">Secondary background</p>
+    <p class="bg-warning">Warning Background</p>
+</div><br><br>
+
+
+
+
+<!-- *Block Elements* -->
+<!-- To make an element into a block element, add the ".d-block" class. Use any of the "d-*-block" classes to control WHEN the element should be a block element on a specific screen width -->
+<div class="container">
+    <h1>Block Elements</h1>
+
+    <span class="d-block bg-success">d-block</span>
+    <span class="d-sm-block bg-success">d-sm-block</span>
+    <span class="d-md-block bg-success">d-md-block</span>
+    <span class="d-lg-block bg-success">d-lg-block</span>
+    <span class="d-xl-block bg-success">d-xl-block</span>
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 FLEX __________ -->
+<!-- Use flex classes to control the layout of Bootstrap 4 components -->
+
+
+<!-- *Flexbox* -->
+<!-- The biggest difference between Bootstrap 3 and Bootstrap 4 is that Bootstrap 4 now uses flexbox, instead of floats, to handle the layout -->
+<!-- The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning -->
+<!-- NOT: CSS Flexbox kısmında da görmüştük !!! -->
+
+
+<!-- To create a flexbox container and to transform direct children into flex items, use the "d-flex" class -->
+<div class="container">
+    <h1>Flex</h1>
+
+    <div class="d-flex p-3 bg-secondary text-white">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+</div><br><br>
+
+
+<!-- To create an inline flexbox container, use the d-inline-flex class -->
+<div class="container">
+    <h1>Inline Flex</h1>
+
+    <div class="d-inline-flex p-3 bg-secondary text-white">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Horizontal Direction* -->
+<!-- Use ".flex-row" to display the flex items horizontally side by side (Default) -->
+<!-- Use ".flex-row-reverse" to right-align the horizontal direction -->
+<div class="container">
+    <h1>Horizontal Flex</h1>
+
+    <div class="d-flex flex-row bg-secondary">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+
+    <div class="d-flex flex-row-reverse bg-secondary">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+      </div>
+</div><br><br>
+
+
+
+
+<!-- *Vertical Direction* -->
+<!-- Use ".flex-column" to display the flex items vertically (on top of each other) -->
+<!-- Use ".flex-column-reverse" to reverse the vertical direction -->
+<div class="container">
+    <h1>Vertical Flex</h1>
+
+    <div class="d-flex flex-column bg-secondary">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+
+    <div class="d-flex flex-column-reverse bg-secondary">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+      </div>
+</div><br><br>
+
+
+
+
+<!-- *Justify Content* -->
+<!-- Use the ".justify-content-*" classes to change the alignment of flex items -->
+<!-- 
+    Valid classes: 
+    start (default) 
+    end
+    center
+    between
+    around 
+-->
+<div class="container">
+    <h1>Flex Justify Content</h1>
+
+    <div class="d-flex justify-content-end bg-secondary mb-3">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+
+    <div class="d-flex justify-content-center bg-secondary mb-3">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+
+    <div class="d-flex justify-content-between bg-secondary mb-3">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+
+    <div class="d-flex justify-content-around bg-secondary mb-3">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Fill / Equal Widths* -->
+<!-- Use ".flex-fill" on flex items to force them into equal widths -->
+<div class="container">
+    <h1>Fill / Equal Widths</h1>
+
+    <div class="d-flex">
+        <div class="p-2 bg-info flex-fill">Flex 1</div>
+        <div class="p-2 bg-warning flex-fill">Flex 2</div>
+        <div class="p-2 bg-primary flex-fill">Flex 3</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Grow* -->
+<!-- Use ".flex-grow-1" on a flex item to take up the rest of the space -->
+<!-- n the example below, the first two flex items take up their necessary space, while the last item takes up the rest of the available space -->
+<div class="container">
+    <h1>Grow</h1>
+
+    <div class="d-flex">
+        <div class="p-2 bg-info">Flex 1</div>
+        <div class="p-2 bg-warning">Flex 2</div>
+        <div class="p-2 bg-primary flex-grow-1">Flex 3</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Order* -->
+<!-- Change the visual order of a specific flex item(s) with the ".order" classes -->
+<!-- Valid classes are from 0 to 12, where the lowest number has highest priority (order-1 is shown before order-2, etc..) -->
+<div class="container">
+    <h1>Order</h1>
+
+    <div class="d-flex bg-secondary">
+        <div class="p-2 bg-info order-3">Flex 1</div>
+        <div class="p-2 bg-warning order-2">Flex 2</div>
+        <div class="p-2 bg-primary order-1">Flex 3</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Auto Margins* -->
+<!-- Easily add auto margins to flex items with ".mr-auto" (push items to the right), or by using ".ml-auto" (push items to the left) -->
+<div class="container">
+    <h1>Auto Margins</h1>
+
+    <div class="d-flex bg-danger">
+        <div class="p-2 mr-auto bg-info">Flex 1</div>      <!-- Flex 1, Flext 2 ve Flex 3'ü sağ köşeye itiyor (mr-auto) -->
+        <div class="p-2 bg-warning">Flex 2</div>
+        <div class="p-2 bg-primary">Flex 3</div>
+    </div>
+
+    <div class="d-flex bg-danger">
+        <div class="p-2 bg-primary">Flex 1</div>
+        <div class="p-2 bg-secondary">Flex 2</div>
+        <div class="p-2 ml-auto bg-success">Flex 3</div>   <!-- Flex 3, Flex 1 ve Flex 2'yi sol köşeye itiyor -->
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Wrap* -->
+<!-- Control how flex items wrap in a flex container with ".flex-nowrap" (default), ".flex-wrap" or ".flex-wrap-reverse" -->
+<!-- 
+    flex-wrap:          Satırın sonuna gidildiği zaman aşağıdan devam eder
+    flex-wrap-reverse:  flex-wrap'ın ters çevirilmiş hali
+    flex-nowrap:        Tüm satır boyunca devam eder aşağı inmez
+-->
+<div class="container">
+    <h1>Wrap</h1>
+
+    <p><code>.flex-wrap:</code></p>
+    <div class="d-flex flex-wrap bg-light">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+        <div class="p-2 border">Flex item 4</div>
+        <div class="p-2 border">Flex item 5</div>
+        <div class="p-2 border">Flex item 6</div>
+        <div class="p-2 border">Flex item 7</div>
+        <div class="p-2 border">Flex item 8</div>
+        <div class="p-2 border">Flex item 9</div>
+        <div class="p-2 border">Flex item 10</div>
+        <div class="p-2 border">Flex item 11</div>
+        <div class="p-2 border">Flex item 12</div>
+        <div class="p-2 border">Flex item 13 </div>
+        <div class="p-2 border">Flex item 14</div>
+        <div class="p-2 border">Flex item 15</div>
+        <div class="p-2 border">Flex item 16</div>
+        <div class="p-2 border">Flex item 17</div>
+        <div class="p-2 border">Flex item 18</div>
+        <div class="p-2 border">Flex item 19</div>
+        <div class="p-2 border">Flex item 20</div>
+        <div class="p-2 border">Flex item 21</div>
+        <div class="p-2 border">Flex item 22</div>
+        <div class="p-2 border">Flex item 23</div>
+        <div class="p-2 border">Flex item 24</div>
+        <div class="p-2 border">Flex item 25</div>
+    </div><br>
+
+    <p><code>.flex-wrap-reverse:</code></p>
+    <div class="d-flex flex-wrap-reverse bg-light">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+        <div class="p-2 border">Flex item 4</div>
+        <div class="p-2 border">Flex item 5</div>
+        <div class="p-2 border">Flex item 6</div>
+        <div class="p-2 border">Flex item 7</div>
+        <div class="p-2 border">Flex item 8</div>
+        <div class="p-2 border">Flex item 9</div>
+        <div class="p-2 border">Flex item 10</div>
+        <div class="p-2 border">Flex item 11</div>
+        <div class="p-2 border">Flex item 12</div>
+        <div class="p-2 border">Flex item 13 </div>
+        <div class="p-2 border">Flex item 14</div>
+        <div class="p-2 border">Flex item 15</div>
+        <div class="p-2 border">Flex item 16</div>
+        <div class="p-2 border">Flex item 17</div>
+        <div class="p-2 border">Flex item 18</div>
+        <div class="p-2 border">Flex item 19</div>
+        <div class="p-2 border">Flex item 20</div>
+        <div class="p-2 border">Flex item 21</div>
+        <div class="p-2 border">Flex item 22</div>
+        <div class="p-2 border">Flex item 23</div>
+        <div class="p-2 border">Flex item 24</div>
+        <div class="p-2 border">Flex item 25</div>
+    </div><br>
+
+    <p><code>.flex-nowrap:</code></p>
+    <div class="d-flex flex-nowrap bg-light">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+        <div class="p-2 border">Flex item 4</div>
+        <div class="p-2 border">Flex item 5</div>
+        <div class="p-2 border">Flex item 6</div>
+        <div class="p-2 border">Flex item 7</div>
+        <div class="p-2 border">Flex item 8</div>
+        <div class="p-2 border">Flex item 9</div>
+        <div class="p-2 border">Flex item 10</div>
+        <div class="p-2 border">Flex item 11</div>
+        <div class="p-2 border">Flex item 12</div>
+        <div class="p-2 border">Flex item 13 </div>
+        <div class="p-2 border">Flex item 14</div>
+        <div class="p-2 border">Flex item 15</div>
+        <div class="p-2 border">Flex item 16</div>
+        <div class="p-2 border">Flex item 17</div>
+        <div class="p-2 border">Flex item 18</div>
+        <div class="p-2 border">Flex item 19</div>
+        <div class="p-2 border">Flex item 20</div>
+        <div class="p-2 border">Flex item 21</div>
+        <div class="p-2 border">Flex item 22</div>
+        <div class="p-2 border">Flex item 23</div>
+        <div class="p-2 border">Flex item 24</div>
+        <div class="p-2 border">Flex item 25</div>
+        <div class="p-2 border">Flex item 26</div>
+        <div class="p-2 border">Flex item 27</div>
+        <div class="p-2 border">Flex item 28</div>
+        <div class="p-2 border">Flex item 29</div>
+        <div class="p-2 border">Flex item 30</div>
+        <div class="p-2 border">Flex item 31</div>
+        <div class="p-2 border">Flex item 32</div>
+        <div class="p-2 border">Flex item 33</div>
+        <div class="p-2 border">Flex item 34</div>
+        <div class="p-2 border">Flex item 35</div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Align Items* -->
+<!-- Control the vertical alignment of single rows of flex items with the ".align-items-*" classes -->
+<!--  
+    Valid classes: 
+    .align-items-start
+    .align-items-end 
+    .align-items-center 
+    .align-items-baseline
+    .align-items-stretch (default) 
+-->
+<div class="container">
+    <h1>Align Items</h1>
+
+    <p>.align-items-start:</p>
+    <div class="d-flex align-items-start bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-items-end:</p>
+    <div class="d-flex align-items-end bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-items-center:</p>
+    <div class="d-flex align-items-center bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-items-baseline:</p>
+    <div class="d-flex align-items-baseline bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-items-stretch (default):</p>
+    <div class="d-flex align-items-stretch bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div>    
+</div><br><br>
+
+
+
+
+<!-- *Align Self* -->
+<!-- Control the vertical alignment of a specified flex item with the ".align-self-*" classes -->
+<!-- 
+    Valid classes: 
+    .align-self-start
+    .align-self-end
+    .align-self-center
+    .align-self-baseline
+    .align-self-stretch (default)
+-->
+<div class="container">
+    <h1>Align Self</h1>
+
+    <p>.align-self-start:</p>
+    <div class="d-flex bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border align-self-start">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-self-end:</p>
+    <div class="d-flex bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border align-self-end">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-self-center:</p>
+    <div class="d-flex bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border align-self-center">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-self-baseline:</p>
+    <div class="d-flex bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border align-self-baseline">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div><br>
+
+    <p>.align-self-stretch (default):</p>
+    <div class="d-flex bg-light" style="height:150px">
+        <div class="p-2 border">Flex item 1</div>
+        <div class="p-2 border align-self-stretch">Flex item 2</div>
+        <div class="p-2 border">Flex item 3</div>
+    </div>    
+</div><br><br>
+
+
+
+
+
+
+
+
+
+
+<!-- __________ BS4 MEDIA OBJECTS __________ -->
+<!-- Bootstrap provides an easy way to align media objects (like images or videos) together with content. Media objects are often used to display blog comments, tweets and so on -->
+
+
+<!-- *Basic Media Object* -->
+<!-- To create a media object, add the ".media" class to a container element, and place media content inside a child container with the ".media-body" class -->
+<!-- Add padding and margins as needed, with the spacing utilities -->
+<div class="container">
+    <h1>Basic Media Objects</h1>
+
+    <div class="media border p-3">
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <p>Üsküdar Üniversitesi Bilgisayar Mühendisliği 4.Sınıf Öğrencisi</p>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Nested Media Objects* -->
+<!-- To nest media objects, place a new ".media" container inside the ".media-body" container -->
+<div class="container">
+    <h1>Nested Media Objects</h1>
+
+    <div class="media border p-3">
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <p>Üsküdar Üniversitesi Bilgisayar Mühendisliği 4.Sınıf Öğrencisi</p>
+
+            <div class="media p-3">
+                <img src="alex.jpg" alt="alex" class="mr-3 mt-3 rounded-circle" style="width: 45px;">
+                <div class="media-body">
+                    <h3>Alex De Souza <small><i>Posted on August 3, 2020</i></small></h3>
+                    <p>Fenerbahçe's legend</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Right-Aligned Media Image* -->
+<!-- To right-align the media image, add the image after the ".media-body" container -->
+<div class="container">
+    <h1>Right-Aligned Media Objects</h1>
+
+    <div class="media border p-3">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <p>Üsküdar Üniversitesi Bilgisayar Mühendisliği 4.Sınıf Öğrencisi</p>
+        </div>
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+    </div>
+</div><br><br>
+
+
+
+
+<!-- *Top, Middle or Bottom Alignment* -->
+<!-- Use the flex utilities, "align-self-*" classes to place the media object on the top, middle or at the bottom -->
+<div class="container">
+    <h1>Top, Middle or Bottom Alignment</h1>
+
+    <!-- Media Top: -->
+    <div class="media">
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="align-self-start mr-3" style="width: 60px;">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <pre>
+                Üsküdar Üniversitesi 
+                Bilgisayar Mühendisliği 4.Sınıf Öğrencisi
+                Fenerbahçe
+                Küçük Çamlıca
+                06.05.1998
+            </pre>
+        </div>
+    </div><br>
+
+    <!-- Media Middle: -->
+    <div class="media">
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="align-self-center mr-3" style="width: 60px;">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <pre>
+                Üsküdar Üniversitesi 
+                Bilgisayar Mühendisliği 4.Sınıf Öğrencisi
+                Fenerbahçe
+                Küçük Çamlıca
+                06.05.1998
+            </pre>
+        </div>
+    </div><br>
+
+    <!-- Media Bottom: -->
+    <div class="media">
+        <img src="cvphoto.jpeg" alt="Ahmet Sami Yeniçeri" class="align-self-end mr-3" style="width: 60px;">
+        <div class="media-body">
+            <h3>Ahmet Sami Yeniçeri <small><i>Posted on August 2, 2020</i></small></h3>
+            <pre>
+                Üsküdar Üniversitesi 
+                Bilgisayar Mühendisliği 4.Sınıf Öğrencisi
+                Fenerbahçe
+                Küçük Çamlıca
+                06.05.1998
+            </pre>
+        </div>
+    </div>
+</div><br><br>
